@@ -854,12 +854,16 @@ svg {
 html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
   <div id="gm-cover-page" class="card">
     <div class="gm-space-copy">
-      <span class="gm-seal">글</span>
-      <p class="gm-eyebrow">2026 문해력 어휘 학습</p>
-      <h1>글맛대첩</h1>
-      <p class="gm-space-subtitle">문해력 기르기</p>
-      <button class="btn btn-primary" id="gm-enter">학습 시작하기 →</button>
-      <button class="btn gm-cover-settings-btn" id="gm-cover-settings-btn" type="button" aria-controls="gm-cover-settings" aria-expanded="false">우주 설정</button>
+      <img class="gm-title-image" src="assets/geulmat-title-white.png" alt="2026 문해력 어휘 학습, 글맛대첩, 문해력 기르기">
+      <button class="btn btn-primary gm-icon-button gm-play-button" id="gm-enter" aria-label="학습 시작하기" title="학습 시작하기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
+        <span class="visually-hidden">학습 시작하기</span>
+      </button>
+      <button class="btn gm-cover-settings-btn gm-space-settings-button" id="gm-cover-settings-btn" type="button" aria-label="우주 설정 열기" title="우주 설정" aria-controls="gm-cover-settings" aria-expanded="false">
+        <svg class="gm-spaceship-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M25 4c8 6 12 15 11 25l-8 8-4-7-4 7-8-8C11 19 17 10 25 4Zm-1 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM12 31l-5 5 8 1Zm24 0 5 5-8 1ZM24 34l-4 10h8Z"/></svg>
+        <span class="gm-gear-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.1 13a7.7 7.7 0 0 0 0-2l2-1.5-2-3.4-2.4 1a8 8 0 0 0-1.7-1L14.7 3h-4l-.4 3.1a8 8 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.5a7.7 7.7 0 0 0 0 2l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 1.7 1l.4 3.1h4l.4-3.1a8 8 0 0 0 1.7-1l2.4 1 2-3.4Zm-7.1 2.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg></span>
+        <span class="visually-hidden">우주 설정</span>
+      </button>
     </div>
     <div id="gm-space-cat" data-cat="black" role="group" aria-label="우주 고양이">
       <img id="gm-space-cat-image" src="assets/cats/black.webp" alt="유리구를 쓴 검은 고양이">
@@ -885,11 +889,15 @@ html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
       <button class="btn" id="gm-cover-settings-close" type="button">닫기</button>
     </div>
     <p class="text-muted">배경의 우주 색조와 함께할 고양이를 골라 보세요.</p>
-    <div class="gm-settings-grid">
-      <label class="form-label" for="gm-bg-color">COLER
+    <div class="gm-settings-grid gm-space-settings-list">
+      <label class="form-label gm-space-setting-row" for="gm-bg-color">
+        <span class="gm-setting-icon gm-star-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.5 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9Z"/></svg></span>
+        <span class="gm-setting-copy"><strong>COLER</strong><small>우주 배경의 색조를 설정해요.</small></span>
         <input class="form-control form-control-color" id="gm-bg-color" type="color" value="#4b2f78">
       </label>
-      <label class="form-label" for="gm-cat-style">CAT
+      <label class="form-label gm-space-setting-row" for="gm-cat-style">
+        <span class="gm-setting-icon gm-cat-head-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 9 4 3l5 3a10 10 0 0 1 6 0l5-3-1 6c1 1.3 1.5 2.8 1.5 4.5 0 4.4-3.8 7.5-8.5 7.5s-8.5-3.1-8.5-7.5C3.5 11.8 4 10.3 5 9Zm3.2 3.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4Zm7.6 0a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4ZM9 16c1.8 1.5 4.2 1.5 6 0l-3-2Z"/></svg></span>
+        <span class="gm-setting-copy"><strong>CAT</strong><small>함께할 우주 고양이를 골라요.</small></span>
         <select class="form-select" id="gm-cat-style">
           <option value="cheese-tabby">치즈 테비</option>
           <option value="siamese">샴</option>
@@ -901,16 +909,27 @@ html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
           <option value="tortoiseshell">카오스</option>
         </select>
       </label>
+      <label class="form-label gm-space-setting-row" for="gm-cat-volume">
+        <span class="gm-setting-icon gm-megaphone-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10v4h3l2 5h3l-1.8-5H11l8 4V6l-8 4Zm18-1.5v7h-2v-7ZM23 6v12h-2V6Z"/></svg></span>
+        <span class="gm-setting-copy"><strong>SOUND</strong><small>울음소리와 골골송 음량을 조절해요.</small></span>
+        <span class="gm-volume-control"><input id="gm-cat-volume" type="range" min="0" max="100" step="5" value="70"><output id="gm-cat-volume-value" for="gm-cat-volume">70%</output></span>
+      </label>
     </div>
   </section>
   <div class="viz-controls" id="gm-nav" hidden>
-    <button class="btn" id="gm-home-btn">처음 화면</button>
+    <button class="btn gm-home-icon-btn" id="gm-home-btn" type="button" aria-label="처음 화면으로 이동" title="처음 화면">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 11.5 12 3l9.5 8.5-1.7 1.9-1.3-1.2V21h-5v-6h-3v6h-5v-8.8l-1.3 1.2Z"/></svg>
+      <span class="visually-hidden">처음 화면</span>
+    </button>
     <button class="btn btn-primary" id="gm-study-tab">단어 학습·연습 문제</button>
     <span class="gm-final-lock-wrap is-locked">
       <button class="btn" id="gm-final-tab" aria-describedby="gm-final-lock-tip" disabled>최종 시험 잠김</button>
       <span id="gm-final-lock-tip" role="tooltip">연습 문제를 3번 이상 반복해서 풀어야 해</span>
     </span>
-    <button class="btn" id="gm-settings-btn">설정</button>
+    <button class="btn gm-nav-settings-btn" id="gm-settings-btn" type="button" aria-label="학습 설정 열기" title="설정">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.1 13a7.7 7.7 0 0 0 0-2l2-1.5-2-3.4-2.4 1a8 8 0 0 0-1.7-1L14.7 3h-4l-.4 3.1a8 8 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.5a7.7 7.7 0 0 0 0 2l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 1.7 1l.4 3.1h4l.4-3.1a8 8 0 0 0 1.7-1l2.4 1 2-3.4Zm-7.1 2.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg>
+      <span class="visually-hidden">설정</span>
+    </button>
     <span class="text-muted" id="gm-rounds">연습 0/3회</span>
   </div>
   <section class="card gm-settings-panel" id="gm-settings" role="dialog" aria-labelledby="gm-study-settings-title" hidden>
@@ -936,8 +955,24 @@ html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
       <label class="form-label" for="gm-choice-count">5지선다
         <input class="form-control" id="gm-choice-count" type="number" min="15" value="15" inputmode="numeric" disabled>
       </label>
+      <label class="form-label" for="gm-range-start">문제 범위 시작
+        <input class="form-control" id="gm-range-start" type="number" min="1" max="176" value="1" inputmode="numeric">
+      </label>
+      <label class="form-label" for="gm-range-end">문제 범위 끝
+        <input class="form-control" id="gm-range-end" type="number" min="25" max="200" value="100" inputmode="numeric">
+      </label>
     </div>
-    <p id="gm-quiz-count-status" aria-live="polite">총 25문항 · 단어 주관식 5 · 뜻 주관식 5 · 5지선다 15</p>
+    <p id="gm-quiz-count-status" aria-live="polite">1~100번에서 총 25문항 · 단어 주관식 5 · 뜻 주관식 5 · 5지선다 15</p>
+    <div class="gm-settings-divider"></div>
+    <h3>글씨 크기</h3>
+    <p class="text-muted">연습 문제와 실전 문제의 글씨 크기를 선택하세요.</p>
+    <label class="form-label" for="gm-question-font-size">문제 글씨 크기
+      <select class="form-select" id="gm-question-font-size">
+        <option value="small">작게</option>
+        <option value="normal" selected>보통</option>
+        <option value="large">크게</option>
+      </select>
+    </label>
     <div class="gm-settings-divider"></div>
     <div class="gm-history-heading">
       <div>
@@ -950,7 +985,9 @@ html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
   </section>
 </div>
 <div id="gm-guide-cat" hidden aria-live="polite">
-  <div id="gm-guide-bubble">연습 문제를 3번 이상 반복해서 클리어하면 최종 시험에 도전할 수 있어!</div>
+  <div id="gm-guide-bubble">
+    <img class="gm-guide-dialogue-image" src="assets/cat-dialogue-white.png" alt="연습 문제는 3번 이상 반복해서 클리어하면 최종 문제를 풀 수 있어">
+  </div>
   <img id="gm-guide-cat-image" src="assets/cats/black.webp" alt="안내하는 고양이">
 </div>
 <div id="gm-star-helper" hidden aria-hidden="true">
@@ -960,7 +997,27 @@ html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
   <img id="gm-background-cat-image" src="assets/cats-walk/black.webp" alt="">
 </div>
 <div id="gm-sound-status" class="visually-hidden" aria-live="polite"></div>
-<style>@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');#geulmat-cover,#geulmat-inline,#geulmat-final{font-family:"Nanum Gothic","나눔고딕",sans-serif;font-weight:500;padding:12px;background:var(--background)}#gm-cover-page{text-align:center;padding-block:48px}#gm-cover-page h1{margin-block:14px}.gm-seal{display:inline-grid;place-items:center;padding:12px;background:var(--destructive);color:var(--primary-foreground);transform:rotate(-3deg);margin-bottom:16px}#gm-enter{margin-top:20px}#gm-nav{margin-bottom:18px;padding-bottom:12px;border-bottom:3px double var(--border)}#gm-settings{margin-bottom:18px}#gm-exam-history{margin-top:16px}#gm-exam-history article{padding-block:10px;border-bottom:1px solid var(--border)}</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@font-face{
+  font-family:"GM Pixel Symbols";
+  src:url("assets/NeoDunggeunmo-Regular.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400 900;
+  font-display:swap;
+  unicode-range:U+0020-0040,U+005B-0060,U+007B-00BF,U+2000-209F,U+20A0-20CF,U+2150-22FF,U+2460-24FF,U+25A0-26FF,U+3000-303F,U+FF01-FF20,U+FF3B-FF40,U+FF5B-FF65,U+1D7CE-1D7FF;
+}
+@font-face{
+  font-family:"GM Pixel Labels";
+  src:url("assets/NeoDunggeunmo-Regular.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+#geulmat-cover,#geulmat-inline,#geulmat-final{font-family:"GM Pixel Symbols","Nanum Gothic","나눔고딕",sans-serif;font-weight:500;padding:12px;background:var(--background)}
+#geulmat-cover button,#geulmat-cover input,#geulmat-cover select,#geulmat-inline button,#geulmat-inline input,#geulmat-inline textarea,#geulmat-inline select,#geulmat-final button,#geulmat-final input,#geulmat-final textarea,#geulmat-final select{font-family:"GM Pixel Symbols","Nanum Gothic","나눔고딕",sans-serif}
+#gm-cover-page{text-align:center;padding-block:48px}#gm-cover-page h1{margin-block:14px}.gm-seal{display:inline-grid;place-items:center;padding:12px;background:var(--destructive);color:var(--primary-foreground);transform:rotate(-3deg);margin-bottom:16px}#gm-enter{margin-top:20px}#gm-nav{margin-bottom:18px;padding-bottom:12px;border-bottom:3px double var(--border)}#gm-settings{margin-bottom:18px}#gm-exam-history{margin-top:16px}#gm-exam-history article{padding-block:10px;border-bottom:1px solid var(--border)}
+</style>
 <style>
 #gm-cover-page{position:relative;overflow:hidden;isolation:isolate}
 #gm-cover-page>*:not(.gm-fill-art){position:relative;z-index:2}
@@ -1045,11 +1102,37 @@ html>body{
 #gm-cover-page>*{position:relative;z-index:2}
 .gm-space-copy{align-self:center;max-width:430px;z-index:10!important}
 .gm-space-copy .gm-seal{background:#ffe18a;color:#102e56;box-shadow:0 0 32px rgb(255 218 112 / 36%)}
+.gm-title-image{display:block;width:min(100%,430px);height:auto;filter:drop-shadow(0 5px 18px rgb(0 8 28 / 48%))}
 .gm-eyebrow{margin:4px 0 12px;color:#cee8ff;letter-spacing:.08em}
 .gm-space-copy h1{margin:0 0 12px;font-size:clamp(42px,7vw,82px);line-height:1;letter-spacing:-.06em;text-shadow:0 3px 28px rgb(71 166 255 / 42%)}
 .gm-space-subtitle{margin:0;color:#e9f6ff;font-size:clamp(18px,2.3vw,27px);font-weight:700}
 #gm-enter{position:relative;z-index:12;margin-top:28px;background:#f6fbff;color:#092c55;border-color:#f6fbff;box-shadow:0 10px 28px rgb(32 137 226 / 36%)}
 .gm-cover-settings-btn{position:relative;z-index:12;margin-top:28px;margin-left:8px;background:rgb(7 21 53 / 58%);color:#edf8ff;border-color:rgb(218 241 255 / 52%)}
+.gm-icon-button{display:inline-grid;place-items:center;width:58px;height:58px;padding:0;border-radius:50%}
+.gm-icon-button>svg{width:29px;height:29px;fill:currentColor}
+.gm-play-button>svg{margin-left:4px}
+.gm-space-settings-button{display:inline-grid;position:relative;place-items:center;width:68px;height:58px;padding:5px 10px;border-radius:18px}
+.gm-spaceship-icon{width:43px;height:43px;fill:currentColor;filter:drop-shadow(0 0 7px rgb(142 216 255 / 52%))}
+.gm-gear-badge{position:absolute;right:-7px;bottom:-7px;display:grid;place-items:center;width:27px;height:27px;border:2px solid #d9efff;border-radius:50%;background:#153f70;color:#fff;box-shadow:0 3px 10px rgb(0 5 25 / 55%)}
+.gm-gear-badge svg{width:17px;height:17px;fill:currentColor}
+.gm-nav-settings-btn{display:inline-grid;place-items:center;width:42px;height:42px;padding:0;border-radius:50%}
+.gm-nav-settings-btn svg{width:22px;height:22px;fill:currentColor}
+.gm-home-icon-btn{display:inline-grid;place-items:center;width:42px;height:42px;padding:0;border-radius:50%}
+.gm-home-icon-btn svg{width:23px;height:23px;fill:currentColor}
+.gm-space-settings-list{grid-template-columns:1fr!important;gap:12px}
+.gm-settings-grid .gm-space-setting-row{display:grid;grid-template-columns:50px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px;border:1px solid rgb(206 234 255 / 24%);border-radius:14px;background:rgb(12 47 88 / 58%)}
+.gm-setting-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgb(101 177 235 / 16%);color:#ffe28a}
+.gm-setting-icon svg{width:28px;height:28px;fill:currentColor}
+.gm-cat-head-icon{color:#d9efff}
+.gm-megaphone-icon{color:#a9e5ff}
+.gm-setting-copy{display:grid;gap:3px}
+.gm-setting-copy strong{font-family:"GM Pixel Labels",monospace;font-size:22px;font-weight:400;line-height:1;color:#f4faff;letter-spacing:.02em}
+.gm-setting-copy small{color:#b9d6ec;line-height:1.35}
+.gm-space-setting-row .form-control-color{width:58px;height:42px;padding:4px}
+.gm-space-setting-row .form-select{min-width:150px}
+.gm-volume-control{display:grid;grid-template-columns:minmax(110px,160px) 44px;align-items:center;gap:8px}
+.gm-volume-control input{width:100%;accent-color:#8ed9ff}
+.gm-volume-control output{color:#e9f7ff;font-weight:700;text-align:right}
 #gm-cover-settings,#gm-settings{
   position:fixed;
   z-index:90;
@@ -1279,6 +1362,7 @@ body,body *{
   line-height:1.5;
   box-shadow:0 12px 28px rgb(0 5 25 / 36%);
 }
+.gm-guide-dialogue-image{display:block;width:100%;height:auto}
 #gm-guide-cat.is-showing{animation:gm-guide-in .34s ease-out both}
 @keyframes gm-guide-in{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
 #gm-star-helper{
@@ -1351,6 +1435,8 @@ body,body *{
   .gm-cover-settings-btn{margin-left:4px}
   #gm-cover-settings,#gm-settings{top:12px;left:12px;width:calc(100vw - 24px);max-height:calc(100vh - 24px)}
   .gm-settings-grid{grid-template-columns:1fr}
+  .gm-settings-grid .gm-space-setting-row{grid-template-columns:42px minmax(0,1fr)}
+  .gm-space-setting-row .form-control-color,.gm-space-setting-row .form-select,.gm-space-setting-row .gm-volume-control{grid-column:1/-1;width:100%}
   .gm-history-heading{align-items:stretch;flex-direction:column}
 }
 @media(hover:none),(prefers-reduced-motion:reduce){
@@ -1408,8 +1494,8 @@ setTimeout(() => {
     const master=ctx.createGain(),tone=ctx.createBiquadFilter();
     tone.type="lowpass";tone.frequency.value=3200;tone.Q.value=.7;
     master.gain.setValueAtTime(.0001,t);
-    master.gain.exponentialRampToValueAtTime(.14,t+.055);
-    master.gain.setValueAtTime(.115,t+.2);
+    master.gain.exponentialRampToValueAtTime(Math.max(.0001,.14*(window.gmCatVolume??.7)),t+.055);
+    master.gain.setValueAtTime(Math.max(.0001,.115*(window.gmCatVolume??.7)),t+.2);
     master.gain.exponentialRampToValueAtTime(.0001,t+duration);
     tone.connect(master).connect(ctx.destination);
     [
@@ -1432,8 +1518,8 @@ setTimeout(() => {
   const purr=()=>{
     const ctx=audio();if(!ctx)return;
     const t=ctx.currentTime+.02,duration=3.6,master=ctx.createGain();
-    master.gain.setValueAtTime(.0001,t);master.gain.exponentialRampToValueAtTime(.075,t+.18);
-    master.gain.setValueAtTime(.075,t+duration-.35);master.gain.exponentialRampToValueAtTime(.0001,t+duration);
+    master.gain.setValueAtTime(.0001,t);master.gain.exponentialRampToValueAtTime(Math.max(.0001,.075*(window.gmCatVolume??.7)),t+.18);
+    master.gain.setValueAtTime(Math.max(.0001,.075*(window.gmCatVolume??.7)),t+duration-.35);master.gain.exponentialRampToValueAtTime(.0001,t+duration);
     master.connect(ctx.destination);
     [52,78].forEach((frequency,index)=>{
       const osc=ctx.createOscillator(),gain=ctx.createGain();
@@ -1453,7 +1539,7 @@ setTimeout(() => {
     const ctx=audio();if(!ctx)return;
     const t=ctx.currentTime,osc=ctx.createOscillator(),gain=ctx.createGain();
     osc.type="sine";osc.frequency.setValueAtTime(420,t);osc.frequency.exponentialRampToValueAtTime(210,t+.09);
-    gain.gain.setValueAtTime(.045,t);gain.gain.exponentialRampToValueAtTime(.0001,t+.1);
+    gain.gain.setValueAtTime(Math.max(.0001,.045*(window.gmCatVolume??.7)),t);gain.gain.exponentialRampToValueAtTime(.0001,t+.1);
     osc.connect(gain).connect(ctx.destination);osc.start(t);osc.stop(t+.11);
   };
   window.gmCatSounds={meow,purr};
@@ -1676,14 +1762,31 @@ setTimeout(()=>{
 </div>
 <style>
 #geulmat-inline{--gm-gap:10px}.gm-head{justify-content:space-between;margin-block:var(--space-4,16px)}.gm-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gm-gap)}.gm-grid .viz-tile{min-height:96px;white-space:normal;text-align:center;word-break:keep-all}.gm-grid .viz-tile span{display:block}.gm-grid .viz-tile small{display:block;margin-top:6px}.gm-grid .viz-tile[data-flipped="true"]{background:var(--accent);color:var(--accent-foreground)}#question-display{margin-block:var(--space-4,16px)}#question-display strong{display:block}#answer-area{display:grid;gap:var(--gm-gap)}#answer-area textarea,#answer-area input{width:100%}.gm-choice{text-align:left;justify-content:flex-start}.gm-choice.is-right{background:var(--primary);color:var(--primary-foreground)}.gm-choice.is-wrong{background:var(--destructive);color:var(--primary-foreground)}#feedback{margin-top:var(--space-4,16px)}#wrong-list{display:grid;gap:var(--gm-gap)}.gm-wrong{border-left:3px solid var(--destructive);padding-inline-start:12px}.gm-wrong p{margin-block:5px}@media(max-width:680px){.gm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gm-head{align-items:flex-start;flex-direction:column}}
-#geulmat-inline{font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-inline .viz-controls{padding-block:12px;border-top:3px double var(--foreground);border-bottom:1px solid var(--border)}#geulmat-inline .gm-head{padding-block:10px;border-bottom:1px dashed var(--border)}#geulmat-inline .gm-grid .viz-tile{border-radius:4px;box-shadow:3px 3px 0 var(--border);font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-inline .gm-grid .viz-tile[data-flipped="true"]{box-shadow:3px 3px 0 var(--ring)}.gm-tile-wrap{position:relative}.gm-tile-wrap .viz-tile{width:100%;height:100%}.gm-star{position:absolute;z-index:2;left:6px;top:6px;border:0;background:transparent;color:var(--muted-foreground);font:inherit;cursor:pointer}.gm-star[data-on="true"]{color:#f2b705}#geulmat-inline #question-card{border-radius:5px;box-shadow:6px 6px 0 var(--border)}#geulmat-inline .gm-wrong{padding-block:8px;background:var(--accent);color:var(--accent-foreground)}</style>
+#geulmat-inline{font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-inline .viz-controls{padding-block:12px;border-top:3px double var(--foreground);border-bottom:1px solid var(--border)}#geulmat-inline .gm-head{padding-block:10px;border-bottom:1px dashed var(--border)}#geulmat-inline .gm-grid .viz-tile{border-radius:4px;box-shadow:3px 3px 0 var(--border);font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-inline .gm-grid .viz-tile[data-flipped="true"]{box-shadow:3px 3px 0 var(--ring)}.gm-tile-wrap{position:relative}.gm-tile-wrap .viz-tile{width:100%;height:100%}.gm-star{position:absolute;z-index:2;left:6px;top:6px;border:0;background:transparent;color:var(--muted-foreground);font:inherit;cursor:pointer}.gm-star[data-on="true"]{color:#f2b705}#geulmat-inline #question-card{border-radius:5px;box-shadow:6px 6px 0 var(--border)}#geulmat-inline .gm-wrong{padding-block:8px;background:var(--accent);color:var(--accent-foreground)}
+/* 연습 문제 가독성 */
+#geulmat-inline #quiz-view .gm-head{font-size:var(--gm-question-meta-size,17px)}
+#geulmat-inline #prompt{font-size:var(--gm-question-prompt-size,18px);line-height:1.6}
+#geulmat-inline #question-display{font-size:var(--gm-question-main-size,22px);line-height:1.6}
+#geulmat-inline #answer-area .btn,#geulmat-inline #answer-area .form-control{font-size:var(--gm-question-control-size,17px);line-height:1.5}
+#geulmat-inline #feedback{font-size:var(--gm-question-meta-size,17px);line-height:1.6}
+</style>
 <script>
 (()=>{const root=document.getElementById("geulmat-inline");const DATA=[{"id":1,"word":"각광","hanja":"脚光","meaning":"사회적 관심이나 흥미."},{"id":2,"word":"각축","hanja":"角逐","meaning":"서로 이기기 위해 맞서서 다툼"},{"id":3,"word":"간헐","hanja":"間歇","meaning":"시간 간격을 두고 되풀이하여 일어났다 그쳤다 함"},{"id":4,"word":"갈파","hanja":"喝破","meaning":"큰 소리로 꾸짖음. 정당한 논리로 진리를 밝힘"},{"id":5,"word":"감찰","hanja":"監察","meaning":"단체의 규율과 구성원의 행동을 감독하여 살핌. 또는 그런 직무."},{"id":6,"word":"강단","hanja":"剛斷","meaning":"어려움을 굳세고 씩씩하게 견디어 내는 힘, 무엇을 결단력 있게 결정짓거나 처리하는 힘"},{"id":7,"word":"개가","hanja":"凱歌","meaning":"싸움에서 이기고 돌아올 때에 부르는 노래. 이기거나 큰 성과가 있을 때의 환성."},{"id":8,"word":"갹출","hanja":"醵出","meaning":"같은 목적을 위하여 여러 사람이 돈을 나누어 냄."},{"id":9,"word":"격의","hanja":"隔意","meaning":"서로 거리를 두고 터놓지 않는 속마음. 또는 그 거리감."},{"id":10,"word":"견지","hanja":"堅持","meaning":"주장이나 태도 따위를 굳세게 지킴"},{"id":11,"word":"경원시","hanja":"敬遠視","meaning":"겉으로는 가까운 체하면서 실제로는 멀리하고 꺼림칙하게 여김."},{"id":12,"word":"경위","hanja":"經緯","meaning":"일이 전개되어 온 과정이나 경로"},{"id":13,"word":"경종","hanja":"警鐘","meaning":"경계하기 위해 주는 주의나 충고"},{"id":14,"word":"고루","hanja":"固陋","meaning":"관념이나 습관에 젖어 고집이 세고 새로운 것을 잘 받아들이지 아니하다."},{"id":15,"word":"고무","hanja":"鼓舞","meaning":"힘을 내도록 격려하고 용기를 북돋움"},{"id":16,"word":"고양","hanja":"高揚","meaning":"정신이나 기분 따위를 북돋워서 높임."},{"id":17,"word":"고찰","hanja":"考察","meaning":"어떤 것을 깊이 생각하고 연구함."},{"id":18,"word":"공상","hanja":"空想","meaning":"현실적이지 못하거나 실현될 가망이 없는 것을 막연히 그리어 봄. 또는 그런 생각."},{"id":19,"word":"과장","hanja":"誇張","meaning":"사실보다 지나치게 불려서 나타냄."},{"id":20,"word":"관철","hanja":"貫徹","meaning":"어려움을 뚫고 나아가 목적을 기어이 이룸."},{"id":21,"word":"교대","hanja":"交代","meaning":"어떤 일을 여럿이 나누어서 차례에 따라 맡아 함. 또는 그 차례에 따라 일을 맡은 사람."},{"id":22,"word":"교류","hanja":"交流","meaning":"문화나 사상 따위가 서로 통함."},{"id":23,"word":"교차","hanja":"交叉","meaning":"서로 엇갈리거나 마주침."},{"id":24,"word":"교체","hanja":"交替","meaning":"사람이나 사물을 다른 사람이나 사물로 대신함."},{"id":25,"word":"교환","hanja":"交換","meaning":"서로 주고받고 함. 서로 바꿈."},{"id":26,"word":"구가","hanja":"謳歌","meaning":"여러 사람이 입을 모아 칭송하여 노래함. 노래를 부른다는 뜻으로, 무엇을 즐겨 누림을 비유적으로 이르는 말."},{"id":27,"word":"구명","hanja":"究明","meaning":"이유나 원리 따위를 깊이 연구하여 밝힘"},{"id":28,"word":"구사","hanja":"驅使","meaning":"자유롭게 다루어 씀"},{"id":29,"word":"굴종","hanja":"屈從","meaning":"제 뜻을 굽혀 남에게 복종함."},{"id":30,"word":"굴지","hanja":"屈指","meaning":"여럿 가운데에서 손가락을 꼽아 셀 만큼 뛰어남."},{"id":31,"word":"규명","hanja":"糾明","meaning":"자세히 따져 사실을 밝힘"},{"id":32,"word":"규합","hanja":"糾合","meaning":"어떤 일을 꾸미려고 세력이나 사람을 모음."},{"id":33,"word":"기저","hanja":"基底","meaning":"어떤 일의 기초나 바탕"},{"id":34,"word":"기치","hanja":"旗幟","meaning":".어떤 목적을 위하여 내세우는 사상이나 강령을 비유적으로 이르는 말"},{"id":35,"word":"기탄","hanja":"忌憚","meaning":"어렵게 여겨 꺼림."},{"id":36,"word":"나타","hanja":"懶惰","meaning":"일 처리나 행동 따위가 게으르고 느림"},{"id":37,"word":"나포","hanja":"拿捕","meaning":"사람이나 배, 비행기 등을 사로잡음."},{"id":38,"word":"난마","hanja":"亂麻","meaning":"갈피를 잡기 어렵게 뒤얽힌 일"},{"id":39,"word":"난맥","hanja":"亂脈","meaning":"이리저리 흩어져서 질서나 체계가 서지 아니함. 또는 그런 상태."},{"id":40,"word":"난무","hanja":"쁖舞","meaning":"함부로 나서서 마구 날뜀"},{"id":41,"word":"남발","hanja":"濫發","meaning":"함부로 만들어 내거나 행함"},{"id":42,"word":"남획","hanja":"濫獲","meaning":"짐승이나 물고기 따위를 마구 잡음"},{"id":43,"word":"내핍","hanja":"耐乏","meaning":"물자의 부족을 참고 견딤"},{"id":44,"word":"농성","hanja":"籠城","meaning":"어떤 목적을 이루기 위하여 한자리를 떠나지 않고 시위함."},{"id":45,"word":"눌변","hanja":"訥辯","meaning":"서툴게 더듬거리는 말솜씨"},{"id":46,"word":"단장","hanja":"斷腸","meaning":"매우 슬퍼 창자가 끊어지는 듯함"},{"id":47,"word":"답보","hanja":"踏步","meaning":"제자리걸음을 함"},{"id":48,"word":"대척","hanja":"對蹠","meaning":"어떤 일의 정반대가 됨"},{"id":49,"word":"도래","hanja":"到來","meaning":"어떤 시기나 기회가 닥쳐옴."},{"id":50,"word":"도외시","hanja":"度外視","meaning":"상관하지 아니하거나 무시함."},{"id":51,"word":"도취","hanja":"陶醉","meaning":"어떠한 것에 마음이 쏠려 취하다시피 됨., 술에 거나하게 취함."},{"id":52,"word":"도탄","hanja":"塗炭","meaning":"진구렁이나 숯불과 같은 데에 빠졌다는 뜻으로, ‘생활이 몹시 어렵고 비참한 상태에 처해 있음’을 이르는 말"},{"id":53,"word":"동일시","hanja":"同一視","meaning":"둘 이상의 것을 똑같은 것으로 봄."},{"id":54,"word":"등귀","hanja":"騰貴","meaning":"값이 뛰어오름"},{"id":55,"word":"말소","hanja":"抹消","meaning":"기록되어 있는 사실을 없애 버림"},{"id":56,"word":"망라","hanja":"網羅","meaning":"널리 모두 포함함"},{"id":57,"word":"맹아","hanja":"萌芽","meaning":"풀이나 나무에 새로 돋아 나오는 싹. 사물의 시초가 되는 것."},{"id":58,"word":"맹점","hanja":"盲點","meaning":"미처 생각하지 못하고 지나치기 쉬운 점"},{"id":59,"word":"맹종","hanja":"盲從","meaning":"옳고 그름을 가리지 않고 남이 시키는 대로 덮어놓고 따름."},{"id":60,"word":"목도","hanja":"目睹","meaning":"눈으로 직접 봄"},{"id":61,"word":"묘연","hanja":"杳然","meaning":"그윽하고 멀어서 눈에 아물아물하다."},{"id":62,"word":"무구","hanja":"無垢","meaning":"몸과 마음이 때묻지 않고 깨끗함."},{"id":63,"word":"묵상","hanja":"默想","meaning":"눈을 감고 말없이 마음속으로 생각함."},{"id":64,"word":"묵종","hanja":"默從","meaning":"말없이 남의 명령이나 요구 또는 의사에 그대로 따라서 좇음."},{"id":65,"word":"문제시","hanja":"問題視","meaning":"논의하거나 해결해야 할 문제의 대상으로 삼음."},{"id":66,"word":"미궁","hanja":"迷宮","meaning":"얽혀 있어서 해결이나 판단이 어려운 상태"},{"id":67,"word":"미연","hanja":"未然","meaning":"아직 그렇게 되지 않은 때"},{"id":68,"word":"박차","hanja":"拍車","meaning":"어떤 일을 촉진하려고 더하는 힘"},{"id":69,"word":"발호","hanja":"跋扈","meaning":"권세나 세력 따위를 함부로 휘둘러 날뜀"},{"id":70,"word":"방만","hanja":"放漫","meaning":"하는 짓이나 일 등이 야무지지 못하고, 맺고 끊음이 없음"},{"id":71,"word":"방불","hanja":"彷彿","meaning":"거의 비슷하다. 무엇과 같다고 느끼게 하다."},{"id":72,"word":"백안시","hanja":"白眼視","meaning":"남을 업신여기거나 무시하는 태도로 흘겨봄."},{"id":73,"word":"봉착","hanja":"逢着","meaning":"어떤 상태에 맞닥뜨림"},{"id":74,"word":"부각","hanja":"浮刻","meaning":"어떤 사물을 특징지어 두드러지게 함."},{"id":75,"word":"부상","hanja":"浮上","meaning":"어떤 현상이 관심의 대상이 되거나 어떤 사람이 훨씬 좋은 위치로 올라섬. 물 위로 떠오름"},{"id":76,"word":"부심","hanja":"腐心","meaning":"근심이나 걱정 따위로 마음이 썩음. 어떤 걱정거리나 문제에 당하여 그 해결책을 찾느라 온통 마음을 씀."},{"id":77,"word":"부양","hanja":"浮揚","meaning":"가라앉은 것이 떠오름. 또는 가라앉은 것을 떠오르게 함."},{"id":78,"word":"부유","hanja":"浮游","meaning":"물 위나 물속, 또는 공기 중에 떠다님. 행선지를 정하지 아니하고 이리저리 떠돌아다님."},{"id":79,"word":"부침","hanja":"浮沈","meaning":"물 위에 떠올랐다 물속에 잠겼다 함. 세력 따위가 성하고 쇠함을 비유적으로 이르는 말."},{"id":80,"word":"비근","hanja":"卑近","meaning":"가까이에서 흔히 볼 수 있음"},{"id":81,"word":"비등","hanja":"沸騰","meaning":"물이 끓듯 떠들썩하게 일어남."},{"id":82,"word":"비축","hanja":"備蓄","meaning":"만약을 대비하여 미리 모아 둠"},{"id":83,"word":"비호","hanja":"庇護","meaning":"어떤 개인이나 집단을 편을 들어 감싸거나 보호함"},{"id":84,"word":"비화","hanja":"飛火","meaning":"튀어 박히는 불똥. 어떠한 일의 영향이 직접 관계가 없는 다른 데에까지 번짐."},{"id":85,"word":"사료","hanja":"思料","meaning":"깊이 생각하여 헤아림"},{"id":86,"word":"사숙","hanja":"私淑","meaning":"어떤 사람으로부터 직접 가르침을 받지는 않았지만, 그 사람의 행적이나 사상 따위를 마음속으로 본받아서 도나 학문을 닦음을 이르는 말"},{"id":87,"word":"산적","hanja":"山積","meaning":"일이나 물건이 산더미처럼 쌓임"},{"id":88,"word":"상상","hanja":"想像","meaning":"실제로 경험하지 않은 현상이나 사물에 대하여 마음속으로 그려 봄."},{"id":89,"word":"상쇄","hanja":"相殺","meaning":"상반되는 것이 서로 영향을 주어 효과가 없어지는 일."},{"id":90,"word":"상승","hanja":"上昇","meaning":"낮은 데서 위로 올라감."},{"id":91,"word":"생경","hanja":"生硬","meaning":"(무엇이) 처음이거나 익숙하지 못하여 부드럽지 못하고 딱딱하다."},{"id":92,"word":"서광","hanja":"曙光","meaning":"기대하는 일에 대하여 나타난 희망의 징조를 비유적으로 이르는 말. 새벽에 동이 틀 무렵의 빛."},{"id":93,"word":"선양","hanja":"宣揚","meaning":"명성이나 권리 따위를 널리 떨치게 함"},{"id":94,"word":"선양","hanja":"宣揚","meaning":"명성이나 권위 따위를 널리 떨치게 함."},{"id":95,"word":"섭렵","hanja":"涉獵","meaning":"이것저것 널리 읽거나 경험함"},{"id":96,"word":"성찰","hanja":"省察","meaning":"지나간 일을 되돌아보거나 살핌"},{"id":97,"word":"소요","hanja":"騷擾","meaning":"여럿이 떠들썩하게 들고 일어남"},{"id":98,"word":"순종","hanja":"順從","meaning":"순순히 따름."},{"id":99,"word":"승화","hanja":"昇華","meaning":"어떤 현상이 더 높은 상태로 발전하는 일."},{"id":100,"word":"신산","hanja":"辛酸","meaning":"음식의 맛이 맵고 신 것처럼 살아가는 일이 힘들고 고생스러움을 비유적으로 이르는 말"},{"id":101,"word":"신장","hanja":"伸張","meaning":"세력이나 권리 따위가 늘어남. 또는 늘어나게 함."},{"id":102,"word":"실기","hanja":"失機","meaning":"기회를 잃거나 놓침."},{"id":103,"word":"심회","hanja":"心懷","meaning":"마음속에 품고 있는 생각"},{"id":104,"word":"아류","hanja":"亞流","meaning":"독창성 없이 모방함. 또는 그런 것이나 사람"},{"id":105,"word":"아성","hanja":"牙城","meaning":"아주 중요한 근거지"},{"id":106,"word":"알력","hanja":"軋轢","meaning":"수레바퀴가 삐걱거린다는 뜻으로, 서로 의견이 맞지 아니하여 사이가 안 좋거나 충돌하는 것을 이르는 말."},{"id":107,"word":"암묵","hanja":"暗默","meaning":"자신의 의사를 말하지 않은 채 잠자코 있는 일"},{"id":108,"word":"야료","hanja":"惹鬧","meaning":"까닭 없이 트집을 잡고 함부로 떠들어 댐. 서로 시비의 실마리를 끌어 일으킴."},{"id":109,"word":"어눌","hanja":"語訥","meaning":"유창하지 못하고 더듬거리는 면이 있다"},{"id":110,"word":"엄습","hanja":"掩襲","meaning":"갑자기 습격함"},{"id":111,"word":"여망","hanja":"輿望","meaning":"많은 사람들이 간절히 기대하고 바람. 또는 그 기대나 바람."},{"id":112,"word":"연상","hanja":"聯想","meaning":"하나의 관념이 다른 관념을 불러일으키는 현상. ‘기차’로 ‘여행’을 떠올리는 따위의 현상이다."},{"id":113,"word":"영어","hanja":"囹圄","meaning":"죄인을 가두어 두는 곳. 한때 형무소라고 부르다가 현재 ‘교도소’로 고쳤다"},{"id":114,"word":"와전","hanja":"訛傳","meaning":"사실과 다르게 전함"},{"id":115,"word":"외람","hanja":"猥濫","meaning":"행동이나 생각이 분수에 지나치다."},{"id":116,"word":"운용","hanja":"運用","meaning":"무엇을 부리어 사용함"},{"id":117,"word":"울화","hanja":"鬱火","meaning":"답답하여 일어나는 화."},{"id":118,"word":"유래","hanja":"由來","meaning":"사물이나 일이 생겨남. 또는 그 사물이나 일이 생겨난 바."},{"id":119,"word":"유예","hanja":"猶豫","meaning":"시일을 미루거나 늦춤"},{"id":120,"word":"유착","hanja":"癒着","meaning":"사물들이 깊게 결합되어 있음"},{"id":121,"word":"이탈","hanja":"離脫","meaning":"어떤 범위나 대열 따위에서 떨어져 나오거나 떨어져 나감."},{"id":122,"word":"인멸","hanja":"湮滅","meaning":"하나도 남김없이 모조리 없앰"},{"id":123,"word":"일천","hanja":"日淺","meaning":"시작한 뒤로, 날짜가 얼마 되지 아니하다."},{"id":124,"word":"일탈","hanja":"逸脫","meaning":"정하여진 영역 또는 본디의 목적이나 길, 사상, 규범, 조직 따위로부터 빠져 벗어남."},{"id":125,"word":"자명","hanja":"自明","meaning":"특별히 따로 설명하지 않아도 명백함"},{"id":126,"word":"잠식","hanja":"蠶食","meaning":"누에가 뽕잎을 먹듯이 점차 조금씩 침략하여 먹어 들어감."},{"id":127,"word":"재래","hanja":"再來","meaning":"두 번째로 옴. 다시 이 세상에 태어남."},{"id":128,"word":"저촉","hanja":"抵觸","meaning":"서로 부딪치거나 모순됨 규칙에 위배됨"},{"id":129,"word":"전도","hanja":"顚倒","meaning":"차례, 가치관 따위가 뒤바뀌어 거꾸로 됨"},{"id":130,"word":"전래","hanja":"傳來","meaning":"예로부터 전하여 내려옴. 외국에서 전하여 들어옴."},{"id":131,"word":"전말","hanja":"顚末","meaning":"처음부터 끝까지 진행되어 온 경위"},{"id":132,"word":"전횡","hanja":"專橫","meaning":"권세를 혼자 쥐고 제 마음대로 함."},{"id":133,"word":"정찰","hanja":"偵察","meaning":"더듬어 살펴서 알아냄."},{"id":134,"word":"제고","hanja":"提高","meaning":"수준이나 정도 따위를 끌어올림."},{"id":135,"word":"조예","hanja":"造詣","meaning":"예술, 기술 따위의 분야에 대한 지식이나 경험이 깊은 경지에 이른 정도."},{"id":136,"word":"준거","hanja":"準據","meaning":"사물의 정도나 성격 따위를 알기 위한 근거나 기준"},{"id":137,"word":"준동","hanja":"蠢動","meaning":"보잘것없거나 불순한 세력이 소란을 피움"},{"id":138,"word":"중상","hanja":"中傷","meaning":"근거 없는 말로 남을 헐뜯어 명예나 지위를 손상함."},{"id":139,"word":"즐비","hanja":"櫛比","meaning":"가지런하고 빽빽하게 늘어서 있음"},{"id":140,"word":"진작","hanja":"振作","meaning":"떨쳐 일어남 북돋움"},{"id":141,"word":"차치","hanja":"且置","meaning":"버려 두고 문제 삼지 아니함."},{"id":142,"word":"참작","hanja":"參酌","meaning":"참고하여 알맞게 살핌"},{"id":143,"word":"창궐","hanja":"猖獗","meaning":"못된 세력이나 전염병 따위가 세차게 일어나 걷잡을 수 없이 퍼짐."},{"id":144,"word":"초래","hanja":"招來","meaning":"일의 결과로서 어떤 현상을 생겨나게 함."},{"id":145,"word":"초탈","hanja":"超脫","meaning":"세속적인 것이나 일반적인 한계를 벗어남."},{"id":146,"word":"촉발","hanja":"觸發","meaning":"어떤 것에 접촉하여 발생함 ⅱ) 감정, 충동 따위가 일어남"},{"id":147,"word":"추종","hanja":"追從","meaning":"남의 뒤를 따라서 좇음. 권력이나 권세를 가진 사람이나 자신이 동의하는 학설 따위를 별 판단 없이 믿고 따름."},{"id":148,"word":"탁견","hanja":"卓見","meaning":"뛰어난 의견"},{"id":149,"word":"탈출","hanja":"脫出","meaning":"어떤 상황이나 구속 따위에서 빠져나오다."},{"id":150,"word":"탈피","hanja":"脫皮","meaning":"일정한 상태나 처지에서 완전히 벗어남. 껍질이나 가죽을 벗김."},{"id":151,"word":"통찰","hanja":"洞察","meaning":"예리한 관찰력으로 사물을 꿰뚫어 봄."},{"id":152,"word":"파경","hanja":"破鏡","meaning":"깨어진 거울. 부부가 헤어지는 것을 비유적으로 이르는 말."},{"id":153,"word":"파다","hanja":"播多","meaning":"소문 따위가 널리 퍼짐"},{"id":154,"word":"편달","hanja":"鞭撻","meaning":"채찍으로 때림. 경계하고 격려함."},{"id":155,"word":"편린","hanja":"片鱗","meaning":"한 조각의 비늘 → 사물의 매우 작은 부분"},{"id":156,"word":"편벽","hanja":"偏僻","meaning":"생각 따위가 한쪽으로 치우쳐 있다. 또는 정상에서 벗어날 정도로 지나치다."},{"id":157,"word":"피력","hanja":"披瀝","meaning":"생각하는 것을 털어놓고 말함."},{"id":158,"word":"필적","hanja":"匹敵","meaning":"능력이 엇비슷하여 맞서 견줄 만함"},{"id":159,"word":"행각","hanja":"行脚","meaning":"여기저기 돌아다님(주로 부정적인 의미)"},{"id":160,"word":"험구","hanja":"險口","meaning":"입을 다문다는 뜻으로, 말하지 아니함을 이르는 말."},{"id":161,"word":"현학","hanja":"衒學","meaning":"학식이 있음을 자랑하여 뽐냄."},{"id":162,"word":"협잡","hanja":"挾雜","meaning":"아니한 방법으로 남을 속임."},{"id":163,"word":"형극","hanja":"荊棘","meaning":"나무의 가시 → 고난이나 장애를 비유"},{"id":164,"word":"혜안","hanja":"慧眼","meaning":"사물을 꿰뚫어 보는 안목과 식견."},{"id":165,"word":"호도","hanja":"糊塗","meaning":"명확한 결말을 내지 않고 실상을 가려서 덮어 버림"},{"id":166,"word":"확산","hanja":"擴散","meaning":"흩어져 널리 퍼지게 되다."},{"id":167,"word":"확장","hanja":"擴張","meaning":"범위, 규모, 세력 따위를 늘려서 넓힘."},{"id":168,"word":"확충","hanja":"擴充","meaning":"늘리고 넓혀 충실하게 함."},{"id":169,"word":"회상","hanja":"回想","meaning":"지난 일을 돌이켜 생각함. 또는 그런 생각."},{"id":170,"word":"힐책","hanja":"詰責","meaning":"잘못된 점을 따져 나무람."},{"id":171,"word":"각골난망","hanja":"刻骨難忘","meaning":"남에게 입은 은혜가 뼈에 새길 만큼 커서 잊히지 아니함."},{"id":172,"word":"격세지감","hanja":"隔世之感","meaning":"그리 오래지 않은 동안에 상당히 많이 달라져서 전혀 다른 세상 혹은 다른 세대가 된 것 같은 느낌."},{"id":173,"word":"결자해지","hanja":"結者解之","meaning":"맺은 사람이 풀어야 한다는 뜻으로, 자기가 저지른 일은 자기가 해결하여야 함을 이르는 말."},{"id":174,"word":"교학상장","hanja":"敎學相長","meaning":"가르치고 배우는 과정에서 스승과 제자가 함께 성장함."},{"id":175,"word":"구상유취","hanja":"口尙乳臭","meaning":"입에서 젖내가 난다는 뜻으로, 말이나 행동이 유치하다는 말."},{"id":176,"word":"금의야행","hanja":"錦衣夜行","meaning":"비단옷을 입고 밤길을 다닌다는 뜻으로, 자랑삼아 하지 않으면 생색이 나지 않음을 이르는 말."},{"id":177,"word":"남부여대","hanja":"男負女戴","meaning":"남자는 짐을 지고 여자는 짐을 인다는 뜻으로, 가난한 사람들이나 재난을 당한 사람들이 살 곳을 찾지 못하고 온갖 고생을 하며 이리저리 떠돌아다님을 비유적으로 이르는 말"},{"id":178,"word":"등고자비","hanja":"登高自卑","meaning":"높은 곳에 오르려면 낮은 곳에서부터 오른다는 뜻으로, 일을 순서대로 하여야 함을 이르는 말."},{"id":179,"word":"명경지수","hanja":"明鏡止水","meaning":"맑은 거울과 고요한 물, 잡념과 가식과 헛된 욕심 없이 맑고 깨끗한 마음."},{"id":180,"word":"명약관화","hanja":"明若觀火","meaning":"불을 보는 것처럼 분명하고 뻔함"},{"id":181,"word":"명재경각","hanja":"命在頃刻","meaning":"거의 죽게 되어 곧 숨이 끊어질 지경에 처함."},{"id":182,"word":"무위도식","hanja":"無爲徒食","meaning":"하는 일 없이 놀고먹음."},{"id":183,"word":"문전성시","hanja":"門前成市","meaning":"찾아오는 사람이 많아 집 문 앞이 시장을 이루다시피 함을 이르는 말."},{"id":184,"word":"불치하문","hanja":"不恥下問","meaning":"손아랫사람이나 지위나 학식이 자기만 못한 사람에게 모르는 것을 묻는 일을 부끄러워하지 아니함."},{"id":185,"word":"삼순구식","hanja":"三旬九食","meaning":"삼십 일 동안 아홉 끼니밖에 먹지 못한다는 뜻으로, 몹시 가난함을 이르는 말."},{"id":186,"word":"순망치한","hanja":"脣亡齒寒","meaning":"입술이 없으면 이가 시리다는 뜻으로, 서로 이해관계가 밀접한 사이에 어느 한쪽이 망하면 다른 한쪽도 그 영향을 받아 온전하기 어려움을 이르는 말."},{"id":187,"word":"언중유골","hanja":"言中有骨","meaning":"말 속에 뼈가 있다는 뜻으로, 예사로운 말 속에 단단한 속뜻이 들어 있음을 이르는 말."},{"id":188,"word":"역지사지","hanja":"易地思之","meaning":"남과 처지를 바꾸어 생각함"},{"id":189,"word":"용의주도","hanja":"用意周到","meaning":"준비가 두루 미쳐 빈틈이 없다"},{"id":190,"word":"우유부단","hanja":"優柔不斷","meaning":"어물거리며 망설이기만 하고 결단력이 없음."},{"id":191,"word":"인지상정","hanja":"人之常情","meaning":"사람이면 누구나 가질 수 있는 보통의 마음이나 감정."},{"id":192,"word":"일사불란","hanja":"一絲不亂","meaning":"한 오라기 실도 엉키지 아니함이란 뜻으로, 질서나 체계 따위가 잘 잡혀 조금도 흐트러지거나 어지러운 데가 없음을 이르는 말"},{"id":193,"word":"자포자기","hanja":"自暴自棄","meaning":"절망에 빠져 자신을 스스로 포기하고 돌아보지 아니함."},{"id":194,"word":"전전반측","hanja":"輾轉反側","meaning":"누워서 몸을 이리저리 뒤척이며 잠을 이루지 못함."},{"id":195,"word":"조삼모사","hanja":"朝三暮四","meaning":"간사한 꾀로 남을 속여 희롱함을 이르는 말."},{"id":196,"word":"주마간산","hanja":"走馬看山","meaning":"말을 타고 달리며 산천을 구경한다는 뜻으로, 사물을 자세히 살펴보지 않고 겉만을 바삐 대충 보는 것을 비유적으로 이르는 말."},{"id":197,"word":"중과부적","hanja":"衆寡不敵","meaning":"적은 수효로 많은 수효에 맞서지 못함"},{"id":198,"word":"지록위마","hanja":"指鹿爲馬","meaning":"윗사람을 농락하여 권세를 마음대로 함을 이르는 말. 모순된 것을 끝까지 우겨서 남을 속이려는 짓을 비유적으로 이르는 말."},{"id":199,"word":"타산지석","hanja":"他山之石","meaning":"남의 산에 있는 돌이라도 나의 옥을 다듬는 데에 소용이 된다는 뜻으로, 다른 사람의 하찮은 언행 또는 허물과 실패까지도 자신을 수양하는 데 도움이 된다는 말"},{"id":200,"word":"파렴치한","hanja":"破廉恥漢","meaning":"체면이나 부끄러움을 모르는 뻔뻔한 사람."}];let stage=1,flipped=new Set(),starred=new Set(),questions=[],qi=0,results=[],retry=false,quizConfig={total:25,word:5,meaning:5,choice:15};
-const totalInput=document.getElementById("gm-question-total"),wordInput=document.getElementById("gm-word-count"),meaningInput=document.getElementById("gm-meaning-count"),choiceInput=document.getElementById("gm-choice-count"),countStatus=document.getElementById("gm-quiz-count-status");
+const totalInput=document.getElementById("gm-question-total"),wordInput=document.getElementById("gm-word-count"),meaningInput=document.getElementById("gm-meaning-count"),choiceInput=document.getElementById("gm-choice-count"),rangeStartInput=document.getElementById("gm-range-start"),rangeEndInput=document.getElementById("gm-range-end"),countStatus=document.getElementById("gm-quiz-count-status");
 function clampNumber(input,min,max){const n=Math.round(Number(input.value)||min);return Math.max(min,Math.min(max,n))}
 function syncQuizConfig(source){
   let total=clampNumber(totalInput,25,100);
   totalInput.value=String(total);
+  let rangeStart=clampNumber(rangeStartInput,1,200),rangeEnd=clampNumber(rangeEndInput,1,200);
+  if(rangeEnd-rangeStart+1<total){
+    if(source==="gm-range-end"){
+      rangeStart=Math.max(1,rangeEnd-total+1);
+      if(rangeEnd-rangeStart+1<total)rangeEnd=Math.min(200,rangeStart+total-1);
+    }else rangeEnd=Math.min(200,rangeStart+total-1);
+    if(rangeEnd-rangeStart+1<total)rangeStart=Math.max(1,rangeEnd-total+1);
+  }
+  rangeStartInput.value=String(rangeStart);rangeEndInput.value=String(rangeEnd);
+  rangeStartInput.max=String(rangeEnd-total+1);rangeEndInput.min=String(rangeStart+total-1);
   const custom=total>25;
   [wordInput,meaningInput,choiceInput].forEach(input=>input.disabled=!custom);
   if(!custom){wordInput.value="5";meaningInput.value="5";choiceInput.value="15"}
@@ -1691,8 +1794,8 @@ function syncQuizConfig(source){
   let word=clampNumber(wordInput,5,total-20),meaning=clampNumber(meaningInput,5,total-20),choice=clampNumber(choiceInput,15,total-10);
   wordInput.value=String(word);meaningInput.value=String(meaning);choiceInput.value=String(choice);
   const valid=word+meaning+choice===total;
-  quizConfig={total,word,meaning,choice};
-  countStatus.textContent=valid?"총 "+total+"문항 · 단어 주관식 "+word+" · 뜻 주관식 "+meaning+" · 5지선다 "+choice:"문항 합계가 "+total+"이 되도록 조정하세요. 현재 합계: "+(word+meaning+choice);
+  quizConfig={total,word,meaning,choice,rangeStart,rangeEnd};
+  countStatus.textContent=valid?rangeStart+"~"+rangeEnd+"번에서 총 "+total+"문항 · 단어 주관식 "+word+" · 뜻 주관식 "+meaning+" · 5지선다 "+choice:"문항 합계가 "+total+"이 되도록 조정하세요. 현재 합계: "+(word+meaning+choice);
   countStatus.classList.toggle("text-destructive",!valid);
   document.getElementById("start-quiz").disabled=!valid;
   document.getElementById("new-quiz").disabled=!valid;
@@ -1700,14 +1803,15 @@ function syncQuizConfig(source){
   if(valid){try{localStorage.setItem("geulmat-quiz-config",JSON.stringify(quizConfig))}catch{}}
   return valid;
 }
-try{const saved=JSON.parse(localStorage.getItem("geulmat-quiz-config")||"null");if(saved){totalInput.value=saved.total;wordInput.value=saved.word;meaningInput.value=saved.meaning;choiceInput.value=saved.choice}}catch{}
-[totalInput,wordInput,meaningInput,choiceInput].forEach(input=>input.addEventListener("input",()=>syncQuizConfig(input.id)));
+try{const saved=JSON.parse(localStorage.getItem("geulmat-quiz-config")||"null");if(saved){totalInput.value=saved.total;wordInput.value=saved.word;meaningInput.value=saved.meaning;choiceInput.value=saved.choice;rangeStartInput.value=saved.rangeStart||1;rangeEndInput.value=saved.rangeEnd||100}}catch{}
+[totalInput,wordInput,meaningInput,choiceInput,rangeStartInput,rangeEndInput].forEach(input=>input.addEventListener("input",()=>syncQuizConfig(input.id)));
 syncQuizConfig();
 try{starred=new Set(JSON.parse(localStorage.getItem("geulmat-starred")||"[]"))}catch{}const $=s=>root.querySelector(s), shuffle=a=>{a=[...a];for(let i=a.length-1;i;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}, norm=s=>String(s||"").normalize("NFKC").replace(/[\s.,!?·'"“”‘’()\-]/g,"").toLowerCase();
 const pool=()=>DATA.filter(v=>stage===1?v.id<=100:v.id>100);
+const quizPool=()=>DATA.filter(v=>v.id>=quizConfig.rangeStart&&v.id<=quizConfig.rangeEnd);
 function renderWords(){const grid=$("#word-grid");$("#stage-label").textContent=stage+" : 단어 100개";grid.innerHTML="";pool().forEach(v=>{const wrap=document.createElement("div");wrap.className="gm-tile-wrap";const star=document.createElement("button");star.className="gm-star";star.setAttribute("aria-label",v.word+" 즐겨찾기");star.textContent=starred.has(v.id)?"★":"☆";star.dataset.on=String(starred.has(v.id));star.onclick=()=>{starred.has(v.id)?starred.delete(v.id):starred.add(v.id);try{localStorage.setItem("geulmat-starred",JSON.stringify([...starred]))}catch{}renderWords()};const b=document.createElement("button");b.className="btn viz-tile";b.dataset.flipped=flipped.has(v.id);b.setAttribute("aria-pressed",String(flipped.has(v.id)));b.setAttribute("aria-label",v.word+" 카드");b.innerHTML=flipped.has(v.id)?"<span>"+v.meaning+"</span>":"<span>"+v.word+"</span><small>"+v.hanja+"</small>";b.onclick=()=>{flipped.has(v.id)?flipped.delete(v.id):flipped.add(v.id);renderWords()};wrap.append(star,b);grid.appendChild(wrap)})}
 function setStage(n){stage=n;flipped.clear();root.querySelectorAll("[data-stage]").forEach(b=>{const on=Number(b.dataset.stage)===n;b.classList.toggle("btn-primary",on);b.setAttribute("aria-pressed",String(on))});renderWords()}
-function makeQuiz(items){if(!items&&!syncQuizConfig())return;const count=items?items.length:quizConfig.total,wordCount=items?Math.min(5,count):quizConfig.word,meaningCount=items?Math.min(5,Math.max(0,count-wordCount)):quizConfig.meaning;const picked=shuffle(items||pool()).slice(0,count);questions=shuffle(picked.map((v,i)=>{const kind=i<wordCount?"word":i<wordCount+meaningCount?"meaning":"choice";const q={v,kind};if(kind==="choice")q.choices=shuffle([v,...shuffle(DATA.filter(x=>x.id!==v.id&&x.word!==v.word)).slice(0,4)]);return q}));qi=0;results=[];retry=!!items;$("#study-view").hidden=true;$("#result-view").hidden=true;$("#quiz-view").hidden=false;renderQuestion()}
+function makeQuiz(items){if(!items&&!syncQuizConfig())return;const count=items?items.length:quizConfig.total,wordCount=items?Math.min(5,count):quizConfig.word,meaningCount=items?Math.min(5,Math.max(0,count-wordCount)):quizConfig.meaning;const source=items||quizPool(),picked=shuffle(source).slice(0,count);questions=shuffle(picked.map((v,i)=>{const kind=i<wordCount?"word":i<wordCount+meaningCount?"meaning":"choice";const q={v,kind};if(kind==="choice"){const distractorPool=source.length>=5?source:DATA;q.choices=shuffle([v,...shuffle(distractorPool.filter(x=>x.id!==v.id&&x.word!==v.word)).slice(0,4)])}return q}));qi=0;results=[];retry=!!items;$("#study-view").hidden=true;$("#result-view").hidden=true;$("#quiz-view").hidden=false;renderQuestion()}
 function meaningOK(a,m){a=norm(a);if(!a)return false;if(norm(m)===a||a.length>=8&&norm(m).includes(a))return true;const ts=m.replace(/[.,!?·'"“”‘’()]/g," ").split(/\s+/).map(norm).filter(t=>t.length>=2);return ts.filter(t=>a.includes(t)).length>=Math.max(2,Math.ceil(ts.length*.45))}
 function renderQuestion(){const q=questions[qi],area=$("#answer-area"),feed=$("#feedback");$("#quiz-progress").textContent=(qi+1)+" / "+questions.length;$("#quiz-kind").textContent=q.kind==="word"?"뜻을 보고 단어 쓰기":q.kind==="meaning"?"단어·한자를 보고 뜻 쓰기":"뜻을 보고 5지선다";$("#prompt").textContent=q.kind==="meaning"?"이 단어의 뜻을 쓰세요.":"이 뜻에 알맞은 단어를 찾으세요.";$("#question-display").innerHTML=q.kind==="meaning"?"<strong>"+q.v.word+" ("+q.v.hanja+")</strong>":"<strong>"+q.v.meaning+"</strong>";feed.innerHTML="";area.innerHTML="";
 if(q.kind==="choice"){q.choices.forEach(v=>{const b=document.createElement("button");b.className="btn gm-choice";b.textContent=v.word+" ("+v.hanja+")";b.onclick=()=>check(String(v.id),b);area.appendChild(b)})}else{const field=document.createElement(q.kind==="meaning"?"textarea":"input");field.className="form-control";field.placeholder=q.kind==="meaning"?"뜻을 문장으로 써 보세요":"단어를 입력하세요";area.appendChild(field);const b=document.createElement("button");b.className="btn btn-primary";b.textContent="정답 확인";b.onclick=()=>check(field.value);area.appendChild(b);field.focus()}}
@@ -1778,7 +1882,14 @@ root.querySelectorAll("[data-stage]").forEach(b=>b.onclick=()=>setStage(Number(b
 </div>
 <style>
 #geulmat-final .exam-status{justify-content:space-between;margin-bottom:var(--space-3,12px)}#geulmat-final .timer-track{height:8px;background:var(--muted);margin-bottom:var(--space-4,16px);overflow:hidden}#geulmat-final .timer-track span{display:block;height:100%;width:100%;background:var(--primary);transition:width 1s linear}#geulmat-final #exam-question{margin-block:var(--space-4,16px)}#geulmat-final #exam-question strong{display:block}#geulmat-final #exam-answer{display:grid;gap:10px}#geulmat-final .exam-choice{justify-content:flex-start;text-align:left;white-space:normal}#geulmat-final .is-right{background:var(--primary);color:var(--primary-foreground)}#geulmat-final .is-wrong{background:var(--destructive);color:var(--primary-foreground)}#geulmat-final .answer-wrong{border-color:var(--destructive)}#geulmat-final .correct-answer{background:var(--primary);color:var(--primary-foreground);padding:var(--space-3,12px);margin-top:var(--space-3,12px)}#geulmat-final #exam-feedback{margin-top:var(--space-4,16px)}#geulmat-final #cutline-input{max-width:120px}#geulmat-final #final-wrong-list{display:grid;gap:12px}#geulmat-final .wrong-row{border-left:3px solid var(--destructive);padding-inline-start:12px}#geulmat-final .wrong-row p{margin-block:5px}@media(max-width:520px){#geulmat-final .exam-status{align-items:flex-start;flex-direction:column}}
-#geulmat-final{font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-final #exam-start{border-radius:5px;box-shadow:6px 6px 0 var(--border)}#geulmat-final #exam-start:before{content:"實戰";display:inline-grid;place-items:center;padding:8px;border:2px solid var(--destructive);color:var(--destructive);transform:rotate(-3deg);margin-bottom:10px}#geulmat-final .timer-track{border-radius:0;border-block:1px solid var(--border)}#geulmat-final #question-card{border-radius:5px}#geulmat-final .wrong-row{background:var(--accent);color:var(--accent-foreground);padding-block:8px}</style>
+#geulmat-final{font-family:"Nanum Gothic","나눔고딕",sans-serif}#geulmat-final #exam-start{border-radius:5px;box-shadow:6px 6px 0 var(--border)}#geulmat-final #exam-start:before{content:"實戰";display:inline-grid;place-items:center;padding:8px;border:2px solid var(--destructive);color:var(--destructive);transform:rotate(-3deg);margin-bottom:10px}#geulmat-final .timer-track{border-radius:0;border-block:1px solid var(--border)}#geulmat-final #question-card{border-radius:5px}#geulmat-final .wrong-row{background:var(--accent);color:var(--accent-foreground);padding-block:8px}
+/* 실전 문제 가독성 */
+#geulmat-final .exam-status{font-size:var(--gm-question-meta-size,17px)}
+#geulmat-final #exam-prompt{font-size:var(--gm-question-prompt-size,18px);line-height:1.6}
+#geulmat-final #exam-question{font-size:var(--gm-question-main-size,22px);line-height:1.6}
+#geulmat-final #exam-answer .btn,#geulmat-final #exam-answer .form-control{font-size:var(--gm-question-control-size,17px);line-height:1.5}
+#geulmat-final #exam-feedback{font-size:var(--gm-question-meta-size,17px);line-height:1.6}
+</style>
 <script>
 (()=>{const root=document.getElementById("geulmat-final"),DATA=[{"id":1,"word":"각광","hanja":"脚光","meaning":"사회적 관심이나 흥미."},{"id":2,"word":"각축","hanja":"角逐","meaning":"서로 이기기 위해 맞서서 다툼"},{"id":3,"word":"간헐","hanja":"間歇","meaning":"시간 간격을 두고 되풀이하여 일어났다 그쳤다 함"},{"id":4,"word":"갈파","hanja":"喝破","meaning":"큰 소리로 꾸짖음. 정당한 논리로 진리를 밝힘"},{"id":5,"word":"감찰","hanja":"監察","meaning":"단체의 규율과 구성원의 행동을 감독하여 살핌. 또는 그런 직무."},{"id":6,"word":"강단","hanja":"剛斷","meaning":"어려움을 굳세고 씩씩하게 견디어 내는 힘, 무엇을 결단력 있게 결정짓거나 처리하는 힘"},{"id":7,"word":"개가","hanja":"凱歌","meaning":"싸움에서 이기고 돌아올 때에 부르는 노래. 이기거나 큰 성과가 있을 때의 환성."},{"id":8,"word":"갹출","hanja":"醵出","meaning":"같은 목적을 위하여 여러 사람이 돈을 나누어 냄."},{"id":9,"word":"격의","hanja":"隔意","meaning":"서로 거리를 두고 터놓지 않는 속마음. 또는 그 거리감."},{"id":10,"word":"견지","hanja":"堅持","meaning":"주장이나 태도 따위를 굳세게 지킴"},{"id":11,"word":"경원시","hanja":"敬遠視","meaning":"겉으로는 가까운 체하면서 실제로는 멀리하고 꺼림칙하게 여김."},{"id":12,"word":"경위","hanja":"經緯","meaning":"일이 전개되어 온 과정이나 경로"},{"id":13,"word":"경종","hanja":"警鐘","meaning":"경계하기 위해 주는 주의나 충고"},{"id":14,"word":"고루","hanja":"固陋","meaning":"관념이나 습관에 젖어 고집이 세고 새로운 것을 잘 받아들이지 아니하다."},{"id":15,"word":"고무","hanja":"鼓舞","meaning":"힘을 내도록 격려하고 용기를 북돋움"},{"id":16,"word":"고양","hanja":"高揚","meaning":"정신이나 기분 따위를 북돋워서 높임."},{"id":17,"word":"고찰","hanja":"考察","meaning":"어떤 것을 깊이 생각하고 연구함."},{"id":18,"word":"공상","hanja":"空想","meaning":"현실적이지 못하거나 실현될 가망이 없는 것을 막연히 그리어 봄. 또는 그런 생각."},{"id":19,"word":"과장","hanja":"誇張","meaning":"사실보다 지나치게 불려서 나타냄."},{"id":20,"word":"관철","hanja":"貫徹","meaning":"어려움을 뚫고 나아가 목적을 기어이 이룸."},{"id":21,"word":"교대","hanja":"交代","meaning":"어떤 일을 여럿이 나누어서 차례에 따라 맡아 함. 또는 그 차례에 따라 일을 맡은 사람."},{"id":22,"word":"교류","hanja":"交流","meaning":"문화나 사상 따위가 서로 통함."},{"id":23,"word":"교차","hanja":"交叉","meaning":"서로 엇갈리거나 마주침."},{"id":24,"word":"교체","hanja":"交替","meaning":"사람이나 사물을 다른 사람이나 사물로 대신함."},{"id":25,"word":"교환","hanja":"交換","meaning":"서로 주고받고 함. 서로 바꿈."},{"id":26,"word":"구가","hanja":"謳歌","meaning":"여러 사람이 입을 모아 칭송하여 노래함. 노래를 부른다는 뜻으로, 무엇을 즐겨 누림을 비유적으로 이르는 말."},{"id":27,"word":"구명","hanja":"究明","meaning":"이유나 원리 따위를 깊이 연구하여 밝힘"},{"id":28,"word":"구사","hanja":"驅使","meaning":"자유롭게 다루어 씀"},{"id":29,"word":"굴종","hanja":"屈從","meaning":"제 뜻을 굽혀 남에게 복종함."},{"id":30,"word":"굴지","hanja":"屈指","meaning":"여럿 가운데에서 손가락을 꼽아 셀 만큼 뛰어남."},{"id":31,"word":"규명","hanja":"糾明","meaning":"자세히 따져 사실을 밝힘"},{"id":32,"word":"규합","hanja":"糾合","meaning":"어떤 일을 꾸미려고 세력이나 사람을 모음."},{"id":33,"word":"기저","hanja":"基底","meaning":"어떤 일의 기초나 바탕"},{"id":34,"word":"기치","hanja":"旗幟","meaning":".어떤 목적을 위하여 내세우는 사상이나 강령을 비유적으로 이르는 말"},{"id":35,"word":"기탄","hanja":"忌憚","meaning":"어렵게 여겨 꺼림."},{"id":36,"word":"나타","hanja":"懶惰","meaning":"일 처리나 행동 따위가 게으르고 느림"},{"id":37,"word":"나포","hanja":"拿捕","meaning":"사람이나 배, 비행기 등을 사로잡음."},{"id":38,"word":"난마","hanja":"亂麻","meaning":"갈피를 잡기 어렵게 뒤얽힌 일"},{"id":39,"word":"난맥","hanja":"亂脈","meaning":"이리저리 흩어져서 질서나 체계가 서지 아니함. 또는 그런 상태."},{"id":40,"word":"난무","hanja":"쁖舞","meaning":"함부로 나서서 마구 날뜀"},{"id":41,"word":"남발","hanja":"濫發","meaning":"함부로 만들어 내거나 행함"},{"id":42,"word":"남획","hanja":"濫獲","meaning":"짐승이나 물고기 따위를 마구 잡음"},{"id":43,"word":"내핍","hanja":"耐乏","meaning":"물자의 부족을 참고 견딤"},{"id":44,"word":"농성","hanja":"籠城","meaning":"어떤 목적을 이루기 위하여 한자리를 떠나지 않고 시위함."},{"id":45,"word":"눌변","hanja":"訥辯","meaning":"서툴게 더듬거리는 말솜씨"},{"id":46,"word":"단장","hanja":"斷腸","meaning":"매우 슬퍼 창자가 끊어지는 듯함"},{"id":47,"word":"답보","hanja":"踏步","meaning":"제자리걸음을 함"},{"id":48,"word":"대척","hanja":"對蹠","meaning":"어떤 일의 정반대가 됨"},{"id":49,"word":"도래","hanja":"到來","meaning":"어떤 시기나 기회가 닥쳐옴."},{"id":50,"word":"도외시","hanja":"度外視","meaning":"상관하지 아니하거나 무시함."},{"id":51,"word":"도취","hanja":"陶醉","meaning":"어떠한 것에 마음이 쏠려 취하다시피 됨., 술에 거나하게 취함."},{"id":52,"word":"도탄","hanja":"塗炭","meaning":"진구렁이나 숯불과 같은 데에 빠졌다는 뜻으로, ‘생활이 몹시 어렵고 비참한 상태에 처해 있음’을 이르는 말"},{"id":53,"word":"동일시","hanja":"同一視","meaning":"둘 이상의 것을 똑같은 것으로 봄."},{"id":54,"word":"등귀","hanja":"騰貴","meaning":"값이 뛰어오름"},{"id":55,"word":"말소","hanja":"抹消","meaning":"기록되어 있는 사실을 없애 버림"},{"id":56,"word":"망라","hanja":"網羅","meaning":"널리 모두 포함함"},{"id":57,"word":"맹아","hanja":"萌芽","meaning":"풀이나 나무에 새로 돋아 나오는 싹. 사물의 시초가 되는 것."},{"id":58,"word":"맹점","hanja":"盲點","meaning":"미처 생각하지 못하고 지나치기 쉬운 점"},{"id":59,"word":"맹종","hanja":"盲從","meaning":"옳고 그름을 가리지 않고 남이 시키는 대로 덮어놓고 따름."},{"id":60,"word":"목도","hanja":"目睹","meaning":"눈으로 직접 봄"},{"id":61,"word":"묘연","hanja":"杳然","meaning":"그윽하고 멀어서 눈에 아물아물하다."},{"id":62,"word":"무구","hanja":"無垢","meaning":"몸과 마음이 때묻지 않고 깨끗함."},{"id":63,"word":"묵상","hanja":"默想","meaning":"눈을 감고 말없이 마음속으로 생각함."},{"id":64,"word":"묵종","hanja":"默從","meaning":"말없이 남의 명령이나 요구 또는 의사에 그대로 따라서 좇음."},{"id":65,"word":"문제시","hanja":"問題視","meaning":"논의하거나 해결해야 할 문제의 대상으로 삼음."},{"id":66,"word":"미궁","hanja":"迷宮","meaning":"얽혀 있어서 해결이나 판단이 어려운 상태"},{"id":67,"word":"미연","hanja":"未然","meaning":"아직 그렇게 되지 않은 때"},{"id":68,"word":"박차","hanja":"拍車","meaning":"어떤 일을 촉진하려고 더하는 힘"},{"id":69,"word":"발호","hanja":"跋扈","meaning":"권세나 세력 따위를 함부로 휘둘러 날뜀"},{"id":70,"word":"방만","hanja":"放漫","meaning":"하는 짓이나 일 등이 야무지지 못하고, 맺고 끊음이 없음"},{"id":71,"word":"방불","hanja":"彷彿","meaning":"거의 비슷하다. 무엇과 같다고 느끼게 하다."},{"id":72,"word":"백안시","hanja":"白眼視","meaning":"남을 업신여기거나 무시하는 태도로 흘겨봄."},{"id":73,"word":"봉착","hanja":"逢着","meaning":"어떤 상태에 맞닥뜨림"},{"id":74,"word":"부각","hanja":"浮刻","meaning":"어떤 사물을 특징지어 두드러지게 함."},{"id":75,"word":"부상","hanja":"浮上","meaning":"어떤 현상이 관심의 대상이 되거나 어떤 사람이 훨씬 좋은 위치로 올라섬. 물 위로 떠오름"},{"id":76,"word":"부심","hanja":"腐心","meaning":"근심이나 걱정 따위로 마음이 썩음. 어떤 걱정거리나 문제에 당하여 그 해결책을 찾느라 온통 마음을 씀."},{"id":77,"word":"부양","hanja":"浮揚","meaning":"가라앉은 것이 떠오름. 또는 가라앉은 것을 떠오르게 함."},{"id":78,"word":"부유","hanja":"浮游","meaning":"물 위나 물속, 또는 공기 중에 떠다님. 행선지를 정하지 아니하고 이리저리 떠돌아다님."},{"id":79,"word":"부침","hanja":"浮沈","meaning":"물 위에 떠올랐다 물속에 잠겼다 함. 세력 따위가 성하고 쇠함을 비유적으로 이르는 말."},{"id":80,"word":"비근","hanja":"卑近","meaning":"가까이에서 흔히 볼 수 있음"},{"id":81,"word":"비등","hanja":"沸騰","meaning":"물이 끓듯 떠들썩하게 일어남."},{"id":82,"word":"비축","hanja":"備蓄","meaning":"만약을 대비하여 미리 모아 둠"},{"id":83,"word":"비호","hanja":"庇護","meaning":"어떤 개인이나 집단을 편을 들어 감싸거나 보호함"},{"id":84,"word":"비화","hanja":"飛火","meaning":"튀어 박히는 불똥. 어떠한 일의 영향이 직접 관계가 없는 다른 데에까지 번짐."},{"id":85,"word":"사료","hanja":"思料","meaning":"깊이 생각하여 헤아림"},{"id":86,"word":"사숙","hanja":"私淑","meaning":"어떤 사람으로부터 직접 가르침을 받지는 않았지만, 그 사람의 행적이나 사상 따위를 마음속으로 본받아서 도나 학문을 닦음을 이르는 말"},{"id":87,"word":"산적","hanja":"山積","meaning":"일이나 물건이 산더미처럼 쌓임"},{"id":88,"word":"상상","hanja":"想像","meaning":"실제로 경험하지 않은 현상이나 사물에 대하여 마음속으로 그려 봄."},{"id":89,"word":"상쇄","hanja":"相殺","meaning":"상반되는 것이 서로 영향을 주어 효과가 없어지는 일."},{"id":90,"word":"상승","hanja":"上昇","meaning":"낮은 데서 위로 올라감."},{"id":91,"word":"생경","hanja":"生硬","meaning":"(무엇이) 처음이거나 익숙하지 못하여 부드럽지 못하고 딱딱하다."},{"id":92,"word":"서광","hanja":"曙光","meaning":"기대하는 일에 대하여 나타난 희망의 징조를 비유적으로 이르는 말. 새벽에 동이 틀 무렵의 빛."},{"id":93,"word":"선양","hanja":"宣揚","meaning":"명성이나 권리 따위를 널리 떨치게 함"},{"id":94,"word":"선양","hanja":"宣揚","meaning":"명성이나 권위 따위를 널리 떨치게 함."},{"id":95,"word":"섭렵","hanja":"涉獵","meaning":"이것저것 널리 읽거나 경험함"},{"id":96,"word":"성찰","hanja":"省察","meaning":"지나간 일을 되돌아보거나 살핌"},{"id":97,"word":"소요","hanja":"騷擾","meaning":"여럿이 떠들썩하게 들고 일어남"},{"id":98,"word":"순종","hanja":"順從","meaning":"순순히 따름."},{"id":99,"word":"승화","hanja":"昇華","meaning":"어떤 현상이 더 높은 상태로 발전하는 일."},{"id":100,"word":"신산","hanja":"辛酸","meaning":"음식의 맛이 맵고 신 것처럼 살아가는 일이 힘들고 고생스러움을 비유적으로 이르는 말"},{"id":101,"word":"신장","hanja":"伸張","meaning":"세력이나 권리 따위가 늘어남. 또는 늘어나게 함."},{"id":102,"word":"실기","hanja":"失機","meaning":"기회를 잃거나 놓침."},{"id":103,"word":"심회","hanja":"心懷","meaning":"마음속에 품고 있는 생각"},{"id":104,"word":"아류","hanja":"亞流","meaning":"독창성 없이 모방함. 또는 그런 것이나 사람"},{"id":105,"word":"아성","hanja":"牙城","meaning":"아주 중요한 근거지"},{"id":106,"word":"알력","hanja":"軋轢","meaning":"수레바퀴가 삐걱거린다는 뜻으로, 서로 의견이 맞지 아니하여 사이가 안 좋거나 충돌하는 것을 이르는 말."},{"id":107,"word":"암묵","hanja":"暗默","meaning":"자신의 의사를 말하지 않은 채 잠자코 있는 일"},{"id":108,"word":"야료","hanja":"惹鬧","meaning":"까닭 없이 트집을 잡고 함부로 떠들어 댐. 서로 시비의 실마리를 끌어 일으킴."},{"id":109,"word":"어눌","hanja":"語訥","meaning":"유창하지 못하고 더듬거리는 면이 있다"},{"id":110,"word":"엄습","hanja":"掩襲","meaning":"갑자기 습격함"},{"id":111,"word":"여망","hanja":"輿望","meaning":"많은 사람들이 간절히 기대하고 바람. 또는 그 기대나 바람."},{"id":112,"word":"연상","hanja":"聯想","meaning":"하나의 관념이 다른 관념을 불러일으키는 현상. ‘기차’로 ‘여행’을 떠올리는 따위의 현상이다."},{"id":113,"word":"영어","hanja":"囹圄","meaning":"죄인을 가두어 두는 곳. 한때 형무소라고 부르다가 현재 ‘교도소’로 고쳤다"},{"id":114,"word":"와전","hanja":"訛傳","meaning":"사실과 다르게 전함"},{"id":115,"word":"외람","hanja":"猥濫","meaning":"행동이나 생각이 분수에 지나치다."},{"id":116,"word":"운용","hanja":"運用","meaning":"무엇을 부리어 사용함"},{"id":117,"word":"울화","hanja":"鬱火","meaning":"답답하여 일어나는 화."},{"id":118,"word":"유래","hanja":"由來","meaning":"사물이나 일이 생겨남. 또는 그 사물이나 일이 생겨난 바."},{"id":119,"word":"유예","hanja":"猶豫","meaning":"시일을 미루거나 늦춤"},{"id":120,"word":"유착","hanja":"癒着","meaning":"사물들이 깊게 결합되어 있음"},{"id":121,"word":"이탈","hanja":"離脫","meaning":"어떤 범위나 대열 따위에서 떨어져 나오거나 떨어져 나감."},{"id":122,"word":"인멸","hanja":"湮滅","meaning":"하나도 남김없이 모조리 없앰"},{"id":123,"word":"일천","hanja":"日淺","meaning":"시작한 뒤로, 날짜가 얼마 되지 아니하다."},{"id":124,"word":"일탈","hanja":"逸脫","meaning":"정하여진 영역 또는 본디의 목적이나 길, 사상, 규범, 조직 따위로부터 빠져 벗어남."},{"id":125,"word":"자명","hanja":"自明","meaning":"특별히 따로 설명하지 않아도 명백함"},{"id":126,"word":"잠식","hanja":"蠶食","meaning":"누에가 뽕잎을 먹듯이 점차 조금씩 침략하여 먹어 들어감."},{"id":127,"word":"재래","hanja":"再來","meaning":"두 번째로 옴. 다시 이 세상에 태어남."},{"id":128,"word":"저촉","hanja":"抵觸","meaning":"서로 부딪치거나 모순됨 규칙에 위배됨"},{"id":129,"word":"전도","hanja":"顚倒","meaning":"차례, 가치관 따위가 뒤바뀌어 거꾸로 됨"},{"id":130,"word":"전래","hanja":"傳來","meaning":"예로부터 전하여 내려옴. 외국에서 전하여 들어옴."},{"id":131,"word":"전말","hanja":"顚末","meaning":"처음부터 끝까지 진행되어 온 경위"},{"id":132,"word":"전횡","hanja":"專橫","meaning":"권세를 혼자 쥐고 제 마음대로 함."},{"id":133,"word":"정찰","hanja":"偵察","meaning":"더듬어 살펴서 알아냄."},{"id":134,"word":"제고","hanja":"提高","meaning":"수준이나 정도 따위를 끌어올림."},{"id":135,"word":"조예","hanja":"造詣","meaning":"예술, 기술 따위의 분야에 대한 지식이나 경험이 깊은 경지에 이른 정도."},{"id":136,"word":"준거","hanja":"準據","meaning":"사물의 정도나 성격 따위를 알기 위한 근거나 기준"},{"id":137,"word":"준동","hanja":"蠢動","meaning":"보잘것없거나 불순한 세력이 소란을 피움"},{"id":138,"word":"중상","hanja":"中傷","meaning":"근거 없는 말로 남을 헐뜯어 명예나 지위를 손상함."},{"id":139,"word":"즐비","hanja":"櫛比","meaning":"가지런하고 빽빽하게 늘어서 있음"},{"id":140,"word":"진작","hanja":"振作","meaning":"떨쳐 일어남 북돋움"},{"id":141,"word":"차치","hanja":"且置","meaning":"버려 두고 문제 삼지 아니함."},{"id":142,"word":"참작","hanja":"參酌","meaning":"참고하여 알맞게 살핌"},{"id":143,"word":"창궐","hanja":"猖獗","meaning":"못된 세력이나 전염병 따위가 세차게 일어나 걷잡을 수 없이 퍼짐."},{"id":144,"word":"초래","hanja":"招來","meaning":"일의 결과로서 어떤 현상을 생겨나게 함."},{"id":145,"word":"초탈","hanja":"超脫","meaning":"세속적인 것이나 일반적인 한계를 벗어남."},{"id":146,"word":"촉발","hanja":"觸發","meaning":"어떤 것에 접촉하여 발생함 ⅱ) 감정, 충동 따위가 일어남"},{"id":147,"word":"추종","hanja":"追從","meaning":"남의 뒤를 따라서 좇음. 권력이나 권세를 가진 사람이나 자신이 동의하는 학설 따위를 별 판단 없이 믿고 따름."},{"id":148,"word":"탁견","hanja":"卓見","meaning":"뛰어난 의견"},{"id":149,"word":"탈출","hanja":"脫出","meaning":"어떤 상황이나 구속 따위에서 빠져나오다."},{"id":150,"word":"탈피","hanja":"脫皮","meaning":"일정한 상태나 처지에서 완전히 벗어남. 껍질이나 가죽을 벗김."},{"id":151,"word":"통찰","hanja":"洞察","meaning":"예리한 관찰력으로 사물을 꿰뚫어 봄."},{"id":152,"word":"파경","hanja":"破鏡","meaning":"깨어진 거울. 부부가 헤어지는 것을 비유적으로 이르는 말."},{"id":153,"word":"파다","hanja":"播多","meaning":"소문 따위가 널리 퍼짐"},{"id":154,"word":"편달","hanja":"鞭撻","meaning":"채찍으로 때림. 경계하고 격려함."},{"id":155,"word":"편린","hanja":"片鱗","meaning":"한 조각의 비늘 → 사물의 매우 작은 부분"},{"id":156,"word":"편벽","hanja":"偏僻","meaning":"생각 따위가 한쪽으로 치우쳐 있다. 또는 정상에서 벗어날 정도로 지나치다."},{"id":157,"word":"피력","hanja":"披瀝","meaning":"생각하는 것을 털어놓고 말함."},{"id":158,"word":"필적","hanja":"匹敵","meaning":"능력이 엇비슷하여 맞서 견줄 만함"},{"id":159,"word":"행각","hanja":"行脚","meaning":"여기저기 돌아다님(주로 부정적인 의미)"},{"id":160,"word":"험구","hanja":"險口","meaning":"입을 다문다는 뜻으로, 말하지 아니함을 이르는 말."},{"id":161,"word":"현학","hanja":"衒學","meaning":"학식이 있음을 자랑하여 뽐냄."},{"id":162,"word":"협잡","hanja":"挾雜","meaning":"아니한 방법으로 남을 속임."},{"id":163,"word":"형극","hanja":"荊棘","meaning":"나무의 가시 → 고난이나 장애를 비유"},{"id":164,"word":"혜안","hanja":"慧眼","meaning":"사물을 꿰뚫어 보는 안목과 식견."},{"id":165,"word":"호도","hanja":"糊塗","meaning":"명확한 결말을 내지 않고 실상을 가려서 덮어 버림"},{"id":166,"word":"확산","hanja":"擴散","meaning":"흩어져 널리 퍼지게 되다."},{"id":167,"word":"확장","hanja":"擴張","meaning":"범위, 규모, 세력 따위를 늘려서 넓힘."},{"id":168,"word":"확충","hanja":"擴充","meaning":"늘리고 넓혀 충실하게 함."},{"id":169,"word":"회상","hanja":"回想","meaning":"지난 일을 돌이켜 생각함. 또는 그런 생각."},{"id":170,"word":"힐책","hanja":"詰責","meaning":"잘못된 점을 따져 나무람."},{"id":171,"word":"각골난망","hanja":"刻骨難忘","meaning":"남에게 입은 은혜가 뼈에 새길 만큼 커서 잊히지 아니함."},{"id":172,"word":"격세지감","hanja":"隔世之感","meaning":"그리 오래지 않은 동안에 상당히 많이 달라져서 전혀 다른 세상 혹은 다른 세대가 된 것 같은 느낌."},{"id":173,"word":"결자해지","hanja":"結者解之","meaning":"맺은 사람이 풀어야 한다는 뜻으로, 자기가 저지른 일은 자기가 해결하여야 함을 이르는 말."},{"id":174,"word":"교학상장","hanja":"敎學相長","meaning":"가르치고 배우는 과정에서 스승과 제자가 함께 성장함."},{"id":175,"word":"구상유취","hanja":"口尙乳臭","meaning":"입에서 젖내가 난다는 뜻으로, 말이나 행동이 유치하다는 말."},{"id":176,"word":"금의야행","hanja":"錦衣夜行","meaning":"비단옷을 입고 밤길을 다닌다는 뜻으로, 자랑삼아 하지 않으면 생색이 나지 않음을 이르는 말."},{"id":177,"word":"남부여대","hanja":"男負女戴","meaning":"남자는 짐을 지고 여자는 짐을 인다는 뜻으로, 가난한 사람들이나 재난을 당한 사람들이 살 곳을 찾지 못하고 온갖 고생을 하며 이리저리 떠돌아다님을 비유적으로 이르는 말"},{"id":178,"word":"등고자비","hanja":"登高自卑","meaning":"높은 곳에 오르려면 낮은 곳에서부터 오른다는 뜻으로, 일을 순서대로 하여야 함을 이르는 말."},{"id":179,"word":"명경지수","hanja":"明鏡止水","meaning":"맑은 거울과 고요한 물, 잡념과 가식과 헛된 욕심 없이 맑고 깨끗한 마음."},{"id":180,"word":"명약관화","hanja":"明若觀火","meaning":"불을 보는 것처럼 분명하고 뻔함"},{"id":181,"word":"명재경각","hanja":"命在頃刻","meaning":"거의 죽게 되어 곧 숨이 끊어질 지경에 처함."},{"id":182,"word":"무위도식","hanja":"無爲徒食","meaning":"하는 일 없이 놀고먹음."},{"id":183,"word":"문전성시","hanja":"門前成市","meaning":"찾아오는 사람이 많아 집 문 앞이 시장을 이루다시피 함을 이르는 말."},{"id":184,"word":"불치하문","hanja":"不恥下問","meaning":"손아랫사람이나 지위나 학식이 자기만 못한 사람에게 모르는 것을 묻는 일을 부끄러워하지 아니함."},{"id":185,"word":"삼순구식","hanja":"三旬九食","meaning":"삼십 일 동안 아홉 끼니밖에 먹지 못한다는 뜻으로, 몹시 가난함을 이르는 말."},{"id":186,"word":"순망치한","hanja":"脣亡齒寒","meaning":"입술이 없으면 이가 시리다는 뜻으로, 서로 이해관계가 밀접한 사이에 어느 한쪽이 망하면 다른 한쪽도 그 영향을 받아 온전하기 어려움을 이르는 말."},{"id":187,"word":"언중유골","hanja":"言中有骨","meaning":"말 속에 뼈가 있다는 뜻으로, 예사로운 말 속에 단단한 속뜻이 들어 있음을 이르는 말."},{"id":188,"word":"역지사지","hanja":"易地思之","meaning":"남과 처지를 바꾸어 생각함"},{"id":189,"word":"용의주도","hanja":"用意周到","meaning":"준비가 두루 미쳐 빈틈이 없다"},{"id":190,"word":"우유부단","hanja":"優柔不斷","meaning":"어물거리며 망설이기만 하고 결단력이 없음."},{"id":191,"word":"인지상정","hanja":"人之常情","meaning":"사람이면 누구나 가질 수 있는 보통의 마음이나 감정."},{"id":192,"word":"일사불란","hanja":"一絲不亂","meaning":"한 오라기 실도 엉키지 아니함이란 뜻으로, 질서나 체계 따위가 잘 잡혀 조금도 흐트러지거나 어지러운 데가 없음을 이르는 말"},{"id":193,"word":"자포자기","hanja":"自暴自棄","meaning":"절망에 빠져 자신을 스스로 포기하고 돌아보지 아니함."},{"id":194,"word":"전전반측","hanja":"輾轉反側","meaning":"누워서 몸을 이리저리 뒤척이며 잠을 이루지 못함."},{"id":195,"word":"조삼모사","hanja":"朝三暮四","meaning":"간사한 꾀로 남을 속여 희롱함을 이르는 말."},{"id":196,"word":"주마간산","hanja":"走馬看山","meaning":"말을 타고 달리며 산천을 구경한다는 뜻으로, 사물을 자세히 살펴보지 않고 겉만을 바삐 대충 보는 것을 비유적으로 이르는 말."},{"id":197,"word":"중과부적","hanja":"衆寡不敵","meaning":"적은 수효로 많은 수효에 맞서지 못함"},{"id":198,"word":"지록위마","hanja":"指鹿爲馬","meaning":"윗사람을 농락하여 권세를 마음대로 함을 이르는 말. 모순된 것을 끝까지 우겨서 남을 속이려는 짓을 비유적으로 이르는 말."},{"id":199,"word":"타산지석","hanja":"他山之石","meaning":"남의 산에 있는 돌이라도 나의 옥을 다듬는 데에 소용이 된다는 뜻으로, 다른 사람의 하찮은 언행 또는 허물과 실패까지도 자신을 수양하는 데 도움이 된다는 말"},{"id":200,"word":"파렴치한","hanja":"破廉恥漢","meaning":"체면이나 부끄러움을 모르는 뻔뻔한 사람."}];let qs=[],idx=0,score=0,results=[],seconds=10,timer=null,locked=false,attempt=0,cutline=30,mode="final",lastWrong=[];
 const $=s=>root.querySelector(s),shuffle=a=>{a=[...a];for(let i=a.length-1;i;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a},norm=s=>String(s||"").normalize("NFKC").toLowerCase().replace(/[\s.,!?·'"“”‘’()\-]/g,"");
@@ -2054,6 +2165,9 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
   const coverSettings=document.getElementById("gm-cover-settings");
   const settings=document.getElementById("gm-settings");
   const bg=document.getElementById("gm-bg-color");
+  const questionFontSize=document.getElementById("gm-question-font-size");
+  const catVolumeInput=document.getElementById("gm-cat-volume");
+  const catVolumeValue=document.getElementById("gm-cat-volume-value");
   const historyBox=document.getElementById("gm-exam-history");
   const finalWrap=finalButton.closest(".gm-final-lock-wrap");
   let rounds=0;
@@ -2108,6 +2222,21 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
     document.body.style.setProperty("--gm-user-bg",color);
     try{localStorage.setItem("geulmat-bg",color)}catch{}
   };
+  const questionFontProfiles={
+    small:{meta:"14px",prompt:"14px",main:"14px",control:"14px"},
+    normal:{meta:"17px",prompt:"18px",main:"22px",control:"17px"},
+    large:{meta:"20px",prompt:"22px",main:"27px",control:"20px"}
+  };
+  const applyQuestionFontSize=size=>{
+    const selected=questionFontProfiles[size]?size:"normal";
+    const profile=questionFontProfiles[selected];
+    document.documentElement.style.setProperty("--gm-question-meta-size",profile.meta);
+    document.documentElement.style.setProperty("--gm-question-prompt-size",profile.prompt);
+    document.documentElement.style.setProperty("--gm-question-main-size",profile.main);
+    document.documentElement.style.setProperty("--gm-question-control-size",profile.control);
+    questionFontSize.value=selected;
+    try{localStorage.setItem("geulmat-question-font-size",selected)}catch{}
+  };
   const renderHistory=()=>{
     let list=[];
     try{list=JSON.parse(localStorage.getItem("geulmat-exam-history")||"[]")}catch{}
@@ -2158,10 +2287,25 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
     study.classList.remove("btn-primary");
   };
   bg.oninput=()=>applyBackground(bg.value);
+  const applyCatVolume=value=>{
+    const percent=Math.max(0,Math.min(100,Math.round(Number(value)||0)));
+    window.gmCatVolume=percent/100;
+    catVolumeInput.value=String(percent);
+    catVolumeValue.textContent=percent+"%";
+    try{localStorage.setItem("geulmat-cat-volume",String(percent))}catch{}
+  };
+  catVolumeInput.oninput=()=>applyCatVolume(catVolumeInput.value);
+  questionFontSize.onchange=()=>applyQuestionFontSize(questionFontSize.value);
   let savedBackground="";
   try{savedBackground=localStorage.getItem("geulmat-bg")||""}catch{}
   if(savedBackground)bg.value=savedBackground;
   applyBackground(bg.value);
+  let savedCatVolume=70;
+  try{savedCatVolume=Number(localStorage.getItem("geulmat-cat-volume")||70)}catch{}
+  applyCatVolume(savedCatVolume);
+  let savedQuestionFontSize="normal";
+  try{savedQuestionFontSize=localStorage.getItem("geulmat-question-font-size")||"normal"}catch{}
+  applyQuestionFontSize(savedQuestionFontSize);
   window.addEventListener("gm-practice-complete",event=>{rounds=event.detail.count;updateShell()});
   window.addEventListener("gm-exam-history",renderHistory);
   updateShell();
@@ -2218,8 +2362,8 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
     const master=ctx.createGain(),tone=ctx.createBiquadFilter();
     tone.type="lowpass";tone.frequency.value=3200;tone.Q.value=.7;
     master.gain.setValueAtTime(.0001,t);
-    master.gain.exponentialRampToValueAtTime(.14,t+.055);
-    master.gain.setValueAtTime(.115,t+.2);
+    master.gain.exponentialRampToValueAtTime(Math.max(.0001,.14*(window.gmCatVolume??.7)),t+.055);
+    master.gain.setValueAtTime(Math.max(.0001,.115*(window.gmCatVolume??.7)),t+.2);
     master.gain.exponentialRampToValueAtTime(.0001,t+duration);
     tone.connect(master).connect(ctx.destination);
     [
@@ -2245,8 +2389,8 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
     const t=ctx.currentTime+.02,duration=3.6;
     const master=ctx.createGain();
     master.gain.setValueAtTime(.0001,t);
-    master.gain.exponentialRampToValueAtTime(.075,t+.18);
-    master.gain.setValueAtTime(.075,t+duration-.35);
+    master.gain.exponentialRampToValueAtTime(Math.max(.0001,.075*(window.gmCatVolume??.7)),t+.18);
+    master.gain.setValueAtTime(Math.max(.0001,.075*(window.gmCatVolume??.7)),t+duration-.35);
     master.gain.exponentialRampToValueAtTime(.0001,t+duration);
     master.connect(ctx.destination);
     [52,78].forEach((frequency,index)=>{
@@ -2276,7 +2420,7 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
     const ctx=getAudio();if(!ctx)return;
     const t=ctx.currentTime,osc=ctx.createOscillator(),gain=ctx.createGain();
     osc.type="sine";osc.frequency.setValueAtTime(420,t);osc.frequency.exponentialRampToValueAtTime(210,t+.09);
-    gain.gain.setValueAtTime(.045,t);gain.gain.exponentialRampToValueAtTime(.0001,t+.1);
+    gain.gain.setValueAtTime(Math.max(.0001,.045*(window.gmCatVolume??.7)),t);gain.gain.exponentialRampToValueAtTime(.0001,t+.1);
     osc.connect(gain).connect(ctx.destination);osc.start(t);osc.stop(t+.11);
   };
   window.gmCatSounds={meow:playMeow,purr:playPurr};
@@ -2423,4 +2567,12 @@ function retryWrong(){if(!lastWrong.length)return;mode="retry";qs=shuffle(lastWr
   }
 })();
 </script>
+<style id="gm-pixel-symbol-font-override">
+#geulmat-cover,#geulmat-inline,#geulmat-final,
+#geulmat-cover button,#geulmat-cover input,#geulmat-cover select,
+#geulmat-inline button,#geulmat-inline input,#geulmat-inline textarea,#geulmat-inline select,
+#geulmat-final button,#geulmat-final input,#geulmat-final textarea,#geulmat-final select{
+  font-family:"GM Pixel Symbols","Nanum Gothic","나눔고딕",sans-serif;
+}
+</style>
 </body></html>
