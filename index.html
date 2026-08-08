@@ -853,8 +853,8 @@ svg {
 }
 html>body{padding:0;margin:0}</style></head><body><div id="geulmat-cover">
   <div id="gm-cover-page" class="card">
+    <img class="gm-title-image" src="assets/geulmat-title-white.png" alt="2026 문해력 어휘 학습, 글맛대첩, 문해력 기르기">
     <div class="gm-space-copy">
-      <img class="gm-title-image" src="assets/geulmat-title-white.png" alt="2026 문해력 어휘 학습, 글맛대첩, 문해력 기르기">
       <button class="btn btn-primary gm-icon-button gm-play-button" id="gm-enter" aria-label="학습 시작하기" title="학습 시작하기">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
         <span class="visually-hidden">학습 시작하기</span>
@@ -1083,6 +1083,7 @@ html>body{
   min-height:590px;
   display:grid;
   grid-template-columns:minmax(250px,.9fr) minmax(320px,1.1fr);
+  grid-template-rows:auto 1fr;
   align-items:center;
   gap:16px;
   padding:42px clamp(24px,6vw,72px);
@@ -1099,9 +1100,9 @@ html>body{
   box-shadow:0 20px 70px rgb(0 8 28 / 45%),inset 0 0 80px rgb(55 139 222 / 9%);
 }
 #gm-cover-page>*{position:relative;z-index:2}
-.gm-space-copy{align-self:center;max-width:430px;z-index:10!important}
+.gm-space-copy{grid-column:1;grid-row:2;align-self:center;max-width:430px;z-index:10!important}
 .gm-space-copy .gm-seal{background:#ffe18a;color:#102e56;box-shadow:0 0 32px rgb(255 218 112 / 36%)}
-.gm-title-image{display:block;width:min(100%,430px);height:auto;filter:drop-shadow(0 5px 18px rgb(0 8 28 / 48%))}
+.gm-title-image{grid-column:1/-1;grid-row:1;display:block;justify-self:center;width:min(100%,430px);height:auto;filter:drop-shadow(0 5px 18px rgb(0 8 28 / 48%))}
 .gm-eyebrow{margin:4px 0 12px;color:#cee8ff;letter-spacing:.08em}
 .gm-space-copy h1{margin:0 0 12px;font-size:clamp(42px,7vw,82px);line-height:1;letter-spacing:-.06em;text-shadow:0 3px 28px rgb(71 166 255 / 42%)}
 .gm-space-subtitle{margin:0;color:#e9f6ff;font-size:clamp(18px,2.3vw,27px);font-weight:700}
@@ -1205,6 +1206,8 @@ html>body{
   --hide-paw-h:22%;
   width:min(48vw,530px);
   aspect-ratio:1;
+  grid-column:2;
+  grid-row:2;
   justify-self:end;
   position:relative;
   pointer-events:none;
@@ -1421,9 +1424,9 @@ body,body *{
 #word-grid .viz-tile[data-flipped="false"]>span{font-size:clamp(20px,2.25vw,27px);font-weight:800;line-height:1.3;letter-spacing:-.025em}
 .form-control,.form-select{background:rgb(6 28 61 / 82%);color:var(--foreground)}
 @media(max-width:760px){
-  #gm-cover-page{min-height:660px;grid-template-columns:1fr;text-align:center;padding:34px 18px 26px}
-  .gm-space-copy{max-width:none;z-index:4}
-  #gm-space-cat{width:min(90vw,430px);justify-self:center;margin-top:-28px}
+  #gm-cover-page{min-height:660px;grid-template-columns:1fr;grid-template-rows:auto auto 1fr;text-align:center;padding:34px 18px 26px}
+  .gm-space-copy{grid-column:1;grid-row:2;max-width:none;z-index:4}
+  #gm-space-cat{grid-column:1;grid-row:3;width:min(90vw,430px);justify-self:center;margin-top:-28px}
   .gm-photo-credit{left:50%;transform:translateX(-50%);white-space:nowrap}
 }
 @media(max-width:460px){
